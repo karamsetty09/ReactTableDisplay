@@ -4,10 +4,12 @@ import { getMovies } from './services/fakeMovieService.js';
 import Movies from './components/movies';
 
 
+
 function App() {
   return (
     <main className="container">
-      <h1>Hello Venkata Sandeep Kumar. Karamsetty</h1>
+      <h1 className="center"> Venkata Sandeep Kumar. Karamsetty</h1>
+      <img src={logo} className="App-logo" alt="logo" />
       <Movies/>
     </main>
   );
