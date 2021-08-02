@@ -4,6 +4,7 @@ import { getMovies } from './services/fakeMovieService.js';
 import Movies from './components/movies';
 import {useState} from 'react';
 import Another from './Another';
+import Todolistapp from './components/todolistapp';
 
 function App() {
 
@@ -27,19 +28,11 @@ function App() {
   }
   return (
     <main className="container">
-      <h1 className="center"> Venkata Sandeep Kumar. Karamsetty</h1>
-      <hr></hr>
-      <div>
-        <span>
-          {count}
-        </span>
-        <button onClick={decrement}>-</button>
-        <button onClick={increment}>+</button>
-      </div>
       <Another name="Venkata" />
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      <Movies/>
-      <p style={somestyle}>{true && <p>{ 3 + 4 }</p> }</p>
+      <Todolistapp name="Sandeep"/>
+      {/* <Movies /> */}
+      
+      
     </main>
   );
 }
