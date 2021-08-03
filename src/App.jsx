@@ -1,10 +1,10 @@
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 import { getMovies } from './services/fakeMovieService.js';
 import Movies from './components/movies';
 import {useState} from 'react';
-import Another from './Another';
-import Todolistapp from './components/todolistapp';
+import Another from './components/todoappUI/Another';
+import Todo from './components/todoappUI/todo';
 
 function App() {
 
@@ -29,9 +29,8 @@ function App() {
   return (
     <main className="container">
       <Another name="Venkata" />
-      <Todolistapp name="Sandeep"/>
       {/* <Movies /> */}
-      
+      <Todo /> 
       
     </main>
   );
