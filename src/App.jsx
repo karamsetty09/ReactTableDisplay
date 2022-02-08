@@ -6,7 +6,7 @@ import {useState} from 'react';
 import Another from './components/Another';
 import TableName from './components/tableName';
 import Todo from './components/todoappUI/todo';
-
+import ContactMe from './components/contactMe';
 function App() {
   return (
     <main className="container">
@@ -14,6 +14,7 @@ function App() {
       <Todo /> 
       <TableName />
       <Movies />
+      <ContactMe />
     </main>
   );
 }
