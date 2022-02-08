@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import { getMovies } from './services/fakeMovieService.js';
 import Movies from './components/movies';
 import {useState} from 'react';
-import Another from './components/todoappUI/Another';
+import Another from './components/Another';
+import TableName from './components/tableName';
 import Todo from './components/todoappUI/todo';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <main className="container">
       <Another name="Venkata" />
       <Todo /> 
+      <TableName />
       <Movies />
     </main>
   );
