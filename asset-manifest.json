@@ -1,27 +1,23 @@
 {
   "files": {
-    "main.css": "/ReactTableDisplay/static/css/main.391d7685.chunk.css",
-    "main.js": "/ReactTableDisplay/static/js/main.2b08fd99.chunk.js",
-    "main.js.map": "/ReactTableDisplay/static/js/main.2b08fd99.chunk.js.map",
-    "runtime-main.js": "/ReactTableDisplay/static/js/runtime-main.de963abc.js",
-    "runtime-main.js.map": "/ReactTableDisplay/static/js/runtime-main.de963abc.js.map",
-    "static/css/2.70373ad2.chunk.css": "/ReactTableDisplay/static/css/2.70373ad2.chunk.css",
-    "static/js/2.836d85c4.chunk.js": "/ReactTableDisplay/static/js/2.836d85c4.chunk.js",
-    "static/js/2.836d85c4.chunk.js.map": "/ReactTableDisplay/static/js/2.836d85c4.chunk.js.map",
-    "static/js/3.bb4c5f9e.chunk.js": "/ReactTableDisplay/static/js/3.bb4c5f9e.chunk.js",
-    "static/js/3.bb4c5f9e.chunk.js.map": "/ReactTableDisplay/static/js/3.bb4c5f9e.chunk.js.map",
+    "main.css": "/ReactTableDisplay/static/css/main.829ddede.chunk.css",
+    "main.js": "/ReactTableDisplay/static/js/main.3d4de0ae.chunk.js",
+    "main.js.map": "/ReactTableDisplay/static/js/main.3d4de0ae.chunk.js.map",
+    "runtime-main.js": "/ReactTableDisplay/static/js/runtime-main.aa00a18b.js",
+    "runtime-main.js.map": "/ReactTableDisplay/static/js/runtime-main.aa00a18b.js.map",
+    "static/js/2.0c0461da.chunk.js": "/ReactTableDisplay/static/js/2.0c0461da.chunk.js",
+    "static/js/2.0c0461da.chunk.js.map": "/ReactTableDisplay/static/js/2.0c0461da.chunk.js.map",
+    "static/js/3.0d0bff11.chunk.js": "/ReactTableDisplay/static/js/3.0d0bff11.chunk.js",
+    "static/js/3.0d0bff11.chunk.js.map": "/ReactTableDisplay/static/js/3.0d0bff11.chunk.js.map",
     "index.html": "/ReactTableDisplay/index.html",
-    "static/css/2.70373ad2.chunk.css.map": "/ReactTableDisplay/static/css/2.70373ad2.chunk.css.map",
-    "static/css/main.391d7685.chunk.css.map": "/ReactTableDisplay/static/css/main.391d7685.chunk.css.map",
-    "static/js/2.836d85c4.chunk.js.LICENSE.txt": "/ReactTableDisplay/static/js/2.836d85c4.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.css": "/ReactTableDisplay/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/css/main.829ddede.chunk.css.map": "/ReactTableDisplay/static/css/main.829ddede.chunk.css.map",
+    "static/js/2.0c0461da.chunk.js.LICENSE.txt": "/ReactTableDisplay/static/js/2.0c0461da.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/ReactTableDisplay/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.de963abc.js",
-    "static/css/2.70373ad2.chunk.css",
-    "static/js/2.836d85c4.chunk.js",
-    "static/css/main.391d7685.chunk.css",
-    "static/js/main.2b08fd99.chunk.js"
+    "static/js/runtime-main.aa00a18b.js",
+    "static/js/2.0c0461da.chunk.js",
+    "static/css/main.829ddede.chunk.css",
+    "static/js/main.3d4de0ae.chunk.js"
   ]
 }
