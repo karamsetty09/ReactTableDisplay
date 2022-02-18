@@ -48,13 +48,13 @@ export default function Another(props) {
           </div>
             <ul className="nav">
                 <li>
-                    <Link to="/">Profile</Link>
+                    <Link to="/">Personal Profile</Link>
                 </li>
                 <li>
-                    <Link to="/todo">todo-app</Link>
+                    <Link to="/todo">ToDo-app</Link>
                 </li>
                 <li>
-                    <Link to="/movies">movies-app</Link>
+                    <Link to="/movies">Movies-app</Link>
                 </li>
                 <li>
                     <Link to="/contactme">Contact Me</Link>

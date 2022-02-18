@@ -4,16 +4,17 @@ import TableName from './components/tableName';
 import Movies from './components/movies';
 import Todo from './components/todoappUI/todo';
 import ContactMe from './components/contactMe';
-import Profile from './components/profile/profile.js';
+import Profile from './components/Profile/profile';
 import Header from './components/header/header';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
+    
       <Router>
         <main className="App">
-        <Header name="Venkata" />
+          <Header name="Venkata" />
         </main>
         <Switch>
               <Route exact path='/' component={Profile}></Route>
@@ -22,6 +23,11 @@ function App() {
               <Route exact path='/contactme' component={ContactMe}></Route>
               <Route exact path='/tablename' component={TableName}></Route>
         </Switch>
+        
+        {
+        /* <main className="App">
+         <Header name="Venkata" />
+        </main> */}
       </Router>
   );
 }
