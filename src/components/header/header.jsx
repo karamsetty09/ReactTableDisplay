@@ -59,6 +59,9 @@ export default function Another(props) {
                 <li>
                     <Link to="/contactme">Contact Me</Link>
                 </li>
+                <li>
+                    <Link to="/tablename">Table Name</Link>
+                </li>
             </ul>
         </center>
       </div>
