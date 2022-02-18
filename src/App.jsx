@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-//import './App.css';
 import { getMovies } from './services/fakeMovieService.js';
-import Movies from './components/movies';
 import {useState} from 'react';
-// import Header from './components/header/header';
 import TableName from './components/tableName';
+import Movies from './components/movies';
 import Todo from './components/todoappUI/todo';
 import ContactMe from './components/contactMe';
-import Profile from './components/PortfolioContainer/Home/Profile';
-import Header from './components/header/header'
+import Profile from './components/profile/profile.js';
+import Header from './components/header/header';
+import { Route, BrowserRouter as Router, Routes} from 'react-router-dom';
+
 function App() {
   return (
-    <main className="container">
-      <Header name="Venkata" />
-      <Todo /> 
-      <TableName />
-      <Movies />
-      <ContactMe />
-      <Profile />
-    </main>
+    <Router>
+      <main className="App">
+        <Header name="Venkata" />
+        <Todo /> 
+        <TableName />
+        <Movies />
+        <ContactMe />
+        <Profile />
+      </main>
+    </Router>
   );
 }
 
