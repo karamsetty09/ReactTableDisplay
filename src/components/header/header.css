@@ -1,0 +1,44 @@
+.header {
+  background-color: #c7ea46;
+}
+
+.name {
+  color: #046b65;
+}
+span {
+  color: #008080;
+}
+
+.button {
+  background-color: #046b65;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+.line {
+  width: 112px;
+  height: 47px;
+  border-bottom: 1px solid black;
+  position: absolute;
+}
+
+.line-1 {
+  height: 1px;
+  background: #008080;
+}
+
+.inline {
+  list-style-type: none;
+  display: flex;
+  width: 1000px;
+  justify-content: space-evenly;
+}
+
+.mystyle {
+  background-color: #e5eeee;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+}

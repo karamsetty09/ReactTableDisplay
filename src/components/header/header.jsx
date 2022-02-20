@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Typical from "react-typical";
+import './header.css';
 
 export default function Another(props) {
     return (
-      <div>
+      <div className="header">
         <br />
         <center>
           <h1>Karamsetty. {props.name} Sandeep Kumar</h1>
-          <br />
+
           <div className="profile-details-role">
             <span className="primary-text">
               {" "}
@@ -39,30 +40,34 @@ export default function Another(props) {
               Knack of building applications with front and back end
             </span>
             <br />
-            <div className="profile-optins">
-              <button className="btn highlighted-btn"> Hire Me </button>
+            <div className="inline">
+              <button className="button"> Hire Me </button>
               <a href="sandeep_Resume.pdf" download="VenkataResume.pdf">
-                <button className="btn highlighted-btn">Get Resume</button>
+                <button className="button">Get Resume</button>
               </a>
             </div>
+
+            <div class="line-1"></div>
           </div>
-            <ul className="nav">
-                <li>
-                    <Link to="/">Personal Profile</Link>
-                </li>
-                <li>
-                    <Link to="/todo">ToDo-app</Link>
-                </li>
-                <li>
-                    <Link to="/movies">Movies-app</Link>
-                </li>
-                <li>
-                    <Link to="/contactme">Contact Me</Link>
-                </li>
-                <li>
-                    <Link to="/tablename">Table Name</Link>
-                </li>
-            </ul>
+          <ul className="inline">
+            <li className="mystyle">
+              <Link to="/">Personal Profile</Link>
+            </li>
+            <li className="mystyle">
+              <Link to="/todo">ToDo-app</Link>
+            </li>
+            <li className="mystyle">
+              <Link to="/movies">Movies-app</Link>
+            </li>
+            <li className="mystyle">
+              <Link to="/contactme">Contact Me</Link>
+            </li>
+            <li className="mystyle">
+              <Link to="/tablename">Table Name</Link>
+            </li>
+
+            <div class="line-1"></div>
+          </ul>
         </center>
       </div>
     );
