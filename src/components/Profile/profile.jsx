@@ -4,7 +4,7 @@ import './profile.css'
 export default function profile() {
   return (
     <div class="container">
-      <h1>Personal Profile</h1>
+      <h1 class="profile-container">Personal Profile</h1>
       <br />
       <p>
         To excel as a software developer through hard work, perseverance and
@@ -14,7 +14,7 @@ export default function profile() {
       </p>
       <section>
         <h3>Skills</h3>
-        <section className="child">
+        <section className="child1">
           <p>
             <strong>Programming Languages:</strong>{" "}
           </p>
@@ -40,7 +40,7 @@ export default function profile() {
           </p>
           <br />
         </section>
-        <section className="child">
+        <section className="child2">
           <p>PHP, JavaScript, C#, Python, Java, SAP ABAP, c++</p>
           <br />
           <p>Laravel, Nodejs, Reactjs</p>

@@ -6,6 +6,7 @@ import Todo from './components/todoappUI/todo';
 import ContactMe from './components/contactMe';
 import Profile from './components/Profile/profile';
 import Header from './components/header/header';
+import sideBar from './components/sidebar/sideBar.jsx';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 

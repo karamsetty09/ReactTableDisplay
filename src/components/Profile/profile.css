@@ -1,13 +1,25 @@
-.container {
-    
+.profile-container {
+  background: #008080;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.child {
-  border: 1px solid rgb(3, 3, 58);
+.child1 {
+  border: 1px solid #c7ea46;
   float: left;
-  width: 50%;
+  width: 25%;
+  color: #008080;
+}
+
+.child2 {
+  border: 1px solid #c7ea46;
+  float: left;
+  width: 75%;
+  color: #008080;
+}
+
+.h1-color {
+  color: #008080;
 }
