@@ -62,3 +62,8 @@ span {
   padding: 12px 24px;
   font-size: 1rem;
 }
+
+h1 {
+  padding: 1rem;
+  color: white;
+}

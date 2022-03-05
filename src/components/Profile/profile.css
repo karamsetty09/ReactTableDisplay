@@ -6,18 +6,21 @@
   box-sizing: border-box;
 }
 
-.child1 {
-  border: 1px solid #c7ea46;
-  float: left;
-  width: 20%;
-  color: #008080;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
 }
 
-.child2 {
-  border: 1px solid #c7ea46;
-  float: left;
-  width: 80%;
-  color: #008080;
+.container {
+  grid-column: 1/4;
+}
+.a {
+  grid-column: 1/2;
+}
+
+.b {
+  grid-column: 2/4;
 }
 
 .h1-color {
