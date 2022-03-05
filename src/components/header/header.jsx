@@ -49,7 +49,7 @@ export default function Another(props) {
 
             <div class="line-1"></div>
           </div>
-          <ul className="inline">
+          {/* <ul className="inline">
             <li className="mystyle">
               <Link to="/">Personal Profile</Link>
             </li>
@@ -67,7 +67,7 @@ export default function Another(props) {
             </li>
 
             <div class="line-1"></div>
-          </ul>
+          </ul> */}
         </center>
       </div>
     );

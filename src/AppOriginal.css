@@ -7,6 +7,20 @@
   pointer-events: none;
 }
 
+.child1 {
+  border: 10px solid #008080;
+  float: left;
+  width: 25%;
+  color: #008080;
+}
+
+.child2 {
+  border: 10px solid #008080;
+  float: left;
+  width: 75%;
+  color: #008080;
+}
+
 /* @media (prefers-reduced-motion: no-preference) {
     .App-logo {
       animation: App-logo-spin infinite 20s linear;
