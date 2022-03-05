@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Typical from "react-typical";
 import Profilepic from '../common/profilepic';
 import './header.css';
@@ -7,11 +6,11 @@ import './header.css';
 export default function Another(props) {
     return (
       <div className="header">
-        <div>
+        <div className='a'>
           <Profilepic></Profilepic>
         </div>
         <br />
-        <div>
+        <div className='b'>
           <center>
             <h1>Karamsetty. {props.name} Sandeep Kumar</h1>
 
@@ -49,7 +48,7 @@ export default function Another(props) {
             </div>
           </center>
         </div>
-        <div>
+        <div className='c'>
           <br />
           <br />
           <button className="button"> Hire Me </button>
