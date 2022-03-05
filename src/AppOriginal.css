@@ -14,11 +14,18 @@
   color: #008080;
 }
 
-.child2 {
-  border: 10px solid #008080;
-  float: left;
-  width: 75%;
-  color: #008080;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+.a {
+  grid-column: 1/1;
+}
+
+.b {
+  grid-column: 2/5;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {

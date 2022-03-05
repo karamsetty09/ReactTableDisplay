@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function sideBar() {
   return (
     <div className='sidebar'>
-    <h1>Apps & portfolio</h1>
+    <h1 className='App-header'>Apps & portfolio</h1>
         <ul >
             <li >
             <Link to="/">Personal Profile</Link>

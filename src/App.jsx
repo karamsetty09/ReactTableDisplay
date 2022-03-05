@@ -8,20 +8,19 @@ import Profile from './components/Profile/profile';
 import Header from './components/header/header';
 import SideBar from './components/sidebar/sideBar.jsx';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 
 function App() {
   return (
-    
       <Router>
         <main className="App">
           <Header name="Venkata" />
         </main>
-        <section>
-          <section className="child1">
+        <section className='wrapper'>
+          <section className="a">
           <SideBar></SideBar>
           </section>
-          <section className="child2">
+          <section className="b">
           <div>
             <Switch>
               <Route exact path='/' component={Profile}></Route>
