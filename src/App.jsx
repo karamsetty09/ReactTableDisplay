@@ -23,7 +23,7 @@ function App() {
           <section className="b">
           <div>
             <Switch>
-              <Route exact path='/' component={Profile}></Route>
+              <Route exact path='/' component={() => <Profile authorized={true}/>}></Route>
               <Route exact path='/todo' component={Todo}></Route>
               <Route exact path='/movies' component={Movies}></Route>
               <Route exact path='/contactme' component={ContactMe}></Route>

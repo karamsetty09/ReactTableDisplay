@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function sideBar() {
   return (
     <div className='sidebar'>
     <h1 className='App-header'>Apps & portfolio</h1>
-        <ul >
+        <ul>
             <li >
             <Link to="/">Personal Profile</Link>
             </li>
