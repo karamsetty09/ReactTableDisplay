@@ -1,27 +1,48 @@
 import React from 'react'
 import { NavLink, useHistory } from 'react-router-dom';
+import { FaHeart, FaGithub} from "react-icons/fa";
+import { GrApps } from "react-icons/gr";
+import { FcBusinessman, FcFilm, FcSettings, FcClapperboard, FcGraduationCap, FcPhone, FcTodoList, FcHome } from "react-icons/fc";
+import './sideBar.css';
 
 export default function sideBar() {
   return (
-    <div className='sidebar'>
-    <h1 className='App-header'>Apps & portfolio</h1>
-        <ul>
-            <li >
+    <div className="sidebar">
+      <h2>__Apps & portfolio__</h2>
+      <br/>
+      <ul>
+        <li>
+          <div>
+            <FcHome />
+            <FcBusinessman />
+            <FaGithub />
             <NavLink to="/">Personal Profile</NavLink>
-            </li>
-            <li >
+          </div>
+        </li>
+        <li>
+          <div>
+            <FcTodoList />
             <NavLink to="/todo">ToDo-app</NavLink>
-            </li>
-            <li >
-            <NavLink to="/movies">Movies-app</NavLink>
-            </li>
-            <li >
-            <NavLink to="/contactme">Contact Me</NavLink>
-            </li>
-            <li >
-            <NavLink to="/tablename">Table Name</NavLink>
-            </li>
-        </ul>
-  </div>
-  )
+          </div>
+        </li>
+        <li>
+          <FcFilm />
+          <FcClapperboard />
+          <NavLink to="/movies">Movies-app</NavLink>
+        </li>
+        <li>
+          <FcPhone />
+          <NavLink to="/contactme">Contact Me</NavLink>
+        </li>
+        <li>
+          <GrApps />
+          <NavLink to="/tablename">Table Name</NavLink>
+        </li>
+        <li>
+          <FcGraduationCap />
+          <FcSettings />
+        </li>
+      </ul>
+    </div>
+  );
 }

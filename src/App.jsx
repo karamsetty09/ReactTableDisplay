@@ -8,7 +8,8 @@ import Profile from './components/Profile/profile';
 import Header from './components/header/header';
 import SideBar from './components/sidebar/sideBar.jsx';
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+import './App.css';
+
 import {
   Route,
   NavLink,
@@ -23,10 +24,10 @@ class App extends Component {
             <Header name="Venkata" />
           </main>
           <section className='wrapper'>
-            <section className="a">
+            <section className="app-a">
             <SideBar></SideBar>
             </section>
-            <section className="b">
+            <section className="app-b">
             <div>
                 <Route exact path='/' component={Profile}></Route>
                 <Route path='/todo' component={Todo}></Route>

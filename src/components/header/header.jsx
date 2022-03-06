@@ -6,14 +6,13 @@ import './header.css';
 export default function Another(props) {
     return (
       <div className="header">
-        <div className='a'>
+        <div className='.header-a'>
           <Profilepic></Profilepic>
         </div>
         <br />
-        <div className='b'>
+        <div className='header-b'>
           <center>
-            <h1>Karamsetty. {props.name} Sandeep Kumar</h1>
-
+            <h1 className='name'>Karamsetty. {props.name} Sandeep Kumar</h1>
             <div className="profile-details-role">
               <span className="primary-text">
                 {" "}
@@ -48,7 +47,7 @@ export default function Another(props) {
             </div>
           </center>
         </div>
-        <div className='c'>
+        <div className='header-c'>
           <br />
           <br />
           <button className="button"> Hire Me </button>
