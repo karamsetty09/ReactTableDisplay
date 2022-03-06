@@ -1,5 +1,24 @@
+/*Header coloring and flex to display contents of div. */
 .header {
   background-color: #c7ea46;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: stretch;
+}
+
+/* all the children of header should get space at top and buttom*/
+.header > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*flex basis for the above declared header-flex*/
+.a .b {
+  flex-basis: 60%;
+}
+.c {
+  flex-basis: 20%;
 }
 
 .name {
@@ -15,6 +34,7 @@ span {
   color: white;
   padding: 12px 24px;
   font-size: 1rem;
+  margin: 10px;
 }
 
 .line {
@@ -41,4 +61,9 @@ span {
   border: none;
   padding: 12px 24px;
   font-size: 1rem;
+}
+
+h1 {
+  padding: 1rem;
+  color: white;
 }

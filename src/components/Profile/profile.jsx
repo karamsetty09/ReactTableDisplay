@@ -12,9 +12,9 @@ export default function profile() {
         opportunities to show my talent and enhance my skills. To meet company
         goals and objectives with zeal and passion.
       </p>
-      <section>
-        <h3>Skills</h3>
-        <section className="child1">
+      <h3>Skills</h3>
+      <section className="wrapper">
+        <section className="a">
           <p>
             <strong>Programming Languages:</strong>{" "}
           </p>
@@ -40,7 +40,7 @@ export default function profile() {
           </p>
           <br />
         </section>
-        <section className="child2">
+        <section className="b">
           <p>PHP, JavaScript, C#, Python, Java, SAP ABAP, c++</p>
           <br />
           <p>Laravel, Nodejs, Reactjs</p>

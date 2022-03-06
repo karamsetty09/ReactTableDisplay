@@ -5,3 +5,8 @@
   color: #008080;
   text-indent: 30px;
 }
+
+.h2 {
+  font-family: var(--mono);
+  color: #008080;
+}

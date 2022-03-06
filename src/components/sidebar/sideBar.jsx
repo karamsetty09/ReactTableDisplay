@@ -1,25 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 
 export default function sideBar() {
   return (
     <div className='sidebar'>
-    <h1>Apps & portfolio</h1>
-        <ul >
+    <h1 className='App-header'>Apps & portfolio</h1>
+        <ul>
             <li >
-            <Link to="/">Personal Profile</Link>
+            <NavLink to="/">Personal Profile</NavLink>
             </li>
             <li >
-            <Link to="/todo">ToDo-app</Link>
+            <NavLink to="/todo">ToDo-app</NavLink>
             </li>
             <li >
-            <Link to="/movies">Movies-app</Link>
+            <NavLink to="/movies">Movies-app</NavLink>
             </li>
             <li >
-            <Link to="/contactme">Contact Me</Link>
+            <NavLink to="/contactme">Contact Me</NavLink>
             </li>
             <li >
-            <Link to="/tablename">Table Name</Link>
+            <NavLink to="/tablename">Table Name</NavLink>
             </li>
         </ul>
   </div>
