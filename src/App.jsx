@@ -8,32 +8,37 @@ import Profile from './components/Profile/profile';
 import Header from './components/header/header';
 import SideBar from './components/sidebar/sideBar.jsx';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
 
-function App() {
-  return (
-      <Router>
-        <main className="App">
-          <Header name="Venkata" />
-        </main>
-        <section className='wrapper'>
-          <section className="a">
-          <SideBar></SideBar>
+class App extends Component {
+  render(){
+    return (
+        <HashRouter>
+          <main className="App">
+            <Header name="Venkata" />
+          </main>
+          <section className='wrapper'>
+            <section className="a">
+            <SideBar></SideBar>
+            </section>
+            <section className="b">
+            <div>
+                <Route exact path='/' component={Profile}></Route>
+                <Route path='/todo' component={Todo}></Route>
+                <Route path='/movies' component={Movies}></Route>
+                <Route path='/contactme' component={ContactMe}></Route>
+                <Route path='/tablename' component={TableName}></Route>
+            </div>
+            </section>
           </section>
-          <section className="b">
-          <div>
-            <Switch>
-              <Route exact path='/' component={() => <Profile authorized={true}/>}></Route>
-              <Route exact path='/todo' component={Todo}></Route>
-              <Route exact path='/movies' component={Movies}></Route>
-              <Route exact path='/contactme' component={ContactMe}></Route>
-              <Route exact path='/tablename' component={TableName}></Route>
-            </Switch>
-          </div>
-          </section>
-        </section>
-      </Router>
-  );
+        </HashRouter>
+    );
+  }
 }
 
 export default App;

@@ -1,8 +1,8 @@
 
 import React from 'react'
 import './profile.css'
-export default function profile({ authorized }) {
-  return authorized ? (
+export default function profile() {
+  return (
     <div class="container">
       <h1 class="profile-container">Personal Profile</h1>
       <br />
@@ -56,5 +56,5 @@ export default function profile({ authorized }) {
         </section>
       </section>
     </div>
-  ) : (<div><h1>Hello</h1></div>);
+  );
 }
