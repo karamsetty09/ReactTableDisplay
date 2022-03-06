@@ -14,10 +14,10 @@
 }
 
 /*flex basis for the above declared header-flex*/
-.a .b {
+.header-a .header-b {
   flex-basis: 60%;
 }
-.c {
+.header-c {
   flex-basis: 20%;
 }
 
