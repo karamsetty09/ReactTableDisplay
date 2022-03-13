@@ -32,7 +32,7 @@ class App extends Component {
                 <Route exact path='/' component={Profile}></Route>
                 <Route path='/todo' component={Todo}></Route>
                 <Route path='/movies' component={Movies}></Route>
-                <Route path='/contactme' component={ContactMe}></Route>
+                <Route path='/contactme' component={() => <ContactMe text="CONTACT_ME"/>}></Route>
                 <Route path='/tablename' component={TableName}></Route>
             </div>
             </section>
