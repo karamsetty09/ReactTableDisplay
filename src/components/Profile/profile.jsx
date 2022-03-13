@@ -1,10 +1,14 @@
 
-import React from 'react'
+import React from 'react';
+import Hr from '../common/hr';
+
 import './profile.css'
 export default function profile() {
   return (
     <div class="container">
+      <Hr/>
       <h1 class="profile-container">Personal Profile</h1>
+      <Hr/>
       <br />
       <p>
         To excel as a software developer through hard work, perseverance and
@@ -12,6 +16,7 @@ export default function profile() {
         opportunities to show my talent and enhance my skills. To meet company
         goals and objectives with zeal and passion.
       </p>
+      <Hr/>
       <h3>Skills</h3>
       <section className="wrapper">
         <section className="a">
