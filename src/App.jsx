@@ -5,10 +5,10 @@ import Movies from './components/movies';
 import Todo from './components/todoappUI/todo';
 import ContactMe from './components/contactMe';
 import Profile from './components/Profile/profile';
-import Header from './components/header/header';
+import MainHeader from './components/header/mainheader';
 import SideBar from './components/sidebar/sideBar.jsx';
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 
 import {
   Route,
@@ -21,7 +21,7 @@ class App extends Component {
     return (
         <HashRouter>
           <main className="App">
-            <Header name="Venkata" />
+            <MainHeader name="Venkata" />
           </main>
           <section className='wrapper'>
             <section className="app-a">

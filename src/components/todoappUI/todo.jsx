@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import './App.css';
-import './reset.css';
+import './App.scss';
 
 function App() {
   const [todos, setTodos] = useState([

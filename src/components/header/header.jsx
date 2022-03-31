@@ -1,69 +1,29 @@
 import React from 'react'
-import Typical from "react-typical";
-import Profilepic from '../common/profilepic';
-import {useState, useEffect} from "react";
 
-import './header.css';
-
-const Header = (props) => {
-  const [time, setTime] = useState(new Date());
-  useEffect(() => {
-    const timer = setTimeout(() => setTime(new Date()), 1000);
-    return () => clearTimeout(timer);
-  });
+export default function header(props) {
+    const letterStyle ={
+        padding: 10,
+        margin: 10,
+        backgroundColor: "#ffde00",
+        color:"#333",
+        display: "inline-block",
+        fontFamily: "monospace",
+        fontSize: 32,
+        textAlign: "center"
+      }
+      function styling(text) {
+        return <div style={letterStyle}>{text}</div>
+      } 
+      function displaytext(text) {
+        var finaltext = [];
+        for (var i=0; i < text.length; i++){
+          var presenttext = text[i];
+          finaltext.push(styling(presenttext));
+        }
+        return finaltext
+      }
+  
   return (
-    <div className="header">
-      <div className=".header-a">
-        <Profilepic></Profilepic>
-      </div>
-      <br />
-      <div className="header-b">
-        <center>
-          <h1 className="name">Karamsetty. {props.name} Sandeep Kumar</h1>
-          <div className="profile-details-role">
-            <span className="primary-text">
-              {" "}
-              <h3>
-                {" "}
-                <Typical
-                  loop={Infinity}
-                  steps={[
-                    "Enthusiastic Dev ",
-                    3000,
-
-                    "Full Stack Developer ",
-                    3000,
-
-                    "Cross Platform v ",
-                    3000,
-
-                    "Enthusiastic Dev ",
-                    3000,
-
-                    "React, Vue.js Dev ",
-                    3000,
-                  ]}
-                />
-              </h3>
-            </span>
-            <span className="profile-role-tagline">
-              Knack of building applications with front and back end
-            </span>
-            <br />
-            <div class="line-1"></div>
-          </div>
-        </center>
-      </div>
-      <div className="header-c">
-        <h1> {time.toLocaleTimeString()}</h1>
-        <button className="button"> Hire Me </button>
-
-        <a href="sandeep_Resume.pdf" download="VenkataResume.pdf">
-          <button className="button">Download Resume</button>
-        </a>
-      </div>
-    </div>
-  );
-};
-
-export default Header;
+    <div>{displaytext(props.text)}</div>
+  )
+}

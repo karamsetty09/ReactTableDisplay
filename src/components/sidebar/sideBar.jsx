@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FaGithub} from "react-icons/fa";
 import { GrApps } from "react-icons/gr";
 import { FcBusinessman, FcFilm, FcSettings, FcClapperboard, FcGraduationCap, FcPhone, FcTodoList, FcHome } from "react-icons/fc";
-import './sideBar.css';
+import './sideBar.scss';
 
 export default function sideBar() {
   return (

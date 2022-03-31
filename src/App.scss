@@ -1,0 +1,33 @@
+/* .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.app-a {
+  grid-column: 1/2;
+  background-color: #c7ea46;
+  height: 80%;
+  position: fixed;
+}
+
+.app-b {
+  grid-column: 2/4;
+} */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.app-a {
+  grid-column: 1/2;
+  background-color: #c7ea46;
+  height: 80%;
+  position: fixed;
+}
+
+.app-b {
+  grid-column: 2/4;
+}

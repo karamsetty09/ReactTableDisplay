@@ -1,11 +1,11 @@
 
 import React from 'react';
 import Hr from '../common/hr';
+import './profile.scss';
 
-import './profile.css'
 export default function profile() {
   return (
-    <div class="container">
+    <div>
       <Hr/>
       <h1 class="profile-container">Personal Profile</h1>
       <Hr/>
