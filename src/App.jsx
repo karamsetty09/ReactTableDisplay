@@ -3,7 +3,7 @@ import {useState} from 'react';
 import TableName from './components/tableName';
 import Movies from './components/movies';
 import Todo from './components/todoappUI/todo';
-import ContactMe from './components/contactMe';
+import ContactMe from './components/contactMe.jsx';
 import Profile from './components/Profile/profile';
 import MainHeader from './components/header/mainheader';
 import SideBar from './components/sidebar/sideBar.jsx';
