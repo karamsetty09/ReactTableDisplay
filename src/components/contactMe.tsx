@@ -1,12 +1,12 @@
-import React,{Component} from 'react';
+import React,{Component, Fragment} from 'react';
 import Hr from './common/hr';
-import Header from './header/header';
+import {Header} from './header/header';
 
-class contactMe extends Component {
-  render(){
+
+export default function contactMe() {
     return (
       <div>
-        <Header text={this.props.text} />
+        <Header text="CONTACT_ME"/>
         <Hr/>
         <address><em>
           8 Woodhill Street<br/>
@@ -17,14 +17,10 @@ class contactMe extends Component {
           </em></address>
           <details>
             <h4>Mixed Berry Tart.</h4>
-            <p4>Raspberries, blueberries, and strawberries on top of a creamy filling served in a crispy tart.</p4>
+            <h6>Raspberries, blueberries, and strawberries on top of a creamy filling served in a crispy tart.</h6>
           </details>
       </div>
     );
-  }
 }
-  
-
-export default contactMe
 
 
