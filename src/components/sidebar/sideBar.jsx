@@ -26,21 +26,29 @@ export default function sideBar() {
           </div>
         </li>
         <li>
+          <div>
           <FcFilm />
           <FcClapperboard />
           <NavLink to="/movies">Movies-app</NavLink>
+          </div>
         </li>
         <li>
+        <div>
           <FcPhone />
           <NavLink to="/contactme">Contact Me</NavLink>
+          </div>
         </li>
         <li>
+          <div>
           <GrApps />
           <NavLink to="/tablename">Table Name</NavLink>
+          </div>
         </li>
         <li>
+          <div>
           <FcGraduationCap />
           <FcSettings />
+          </div>
         </li>
       </ul>
     </div>

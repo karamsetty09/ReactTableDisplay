@@ -18,21 +18,12 @@ export function Header(props: Props) {
       fontSize: "1.5rem",
       textAlign: "center",
     }
-      function styling(text: string) {
-        return <div style={letterStyle}>{text}</div>
-      } 
-      function displaytext(text: string) {
-        var finaltext = [];
-        for (var i=0; i < text.length; i++){
-          var presenttext = text[i];
-          finaltext.push(styling(presenttext));
-        }
-        return finaltext
-      }
-  
+    function styling(text: string) {
+      return <div style={letterStyle}>{text}</div>
+    }    
   return (
     <Fragment>
-      {displaytext(props.text)}
+      {props.text.split('').map(character => styling(character))}
     </Fragment>
   )
 }
