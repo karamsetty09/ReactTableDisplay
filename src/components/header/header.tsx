@@ -4,14 +4,15 @@ import {Fragment} from 'react';
 
 interface Props {
   text: string
+  color: string
 }
 
-export function Header(Props: Props) {
+export function Header(props: Props) {
     const letterStyle: CSS.Properties = {
       padding: "1rem",
       margin: "1rem",
       backgroundColor: "#008080",
-      color:"white",
+      color: `${props.color}`,
       display: "inline-block",
       fontFamily: "monospace",
       fontSize: "1.5rem",
@@ -31,7 +32,7 @@ export function Header(Props: Props) {
   
   return (
     <Fragment>
-      {displaytext(Props.text)}
+      {displaytext(props.text)}
     </Fragment>
   )
 }

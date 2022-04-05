@@ -8,7 +8,7 @@ export default function profile() {
   return (
     <div>
       <Hr/>
-      <Header class="profile-container" text="PERSONAL-PROFILE"/>
+      <Header color="white" text="PERSONAL-PROFILE"/>
       <Hr/>
       <br />
       <p>

@@ -7,7 +7,7 @@ export default function contactMe() {
     return (
       <div>
         <Fragment>
-        <Header text="CONTACT-ME"/>
+        <Header text="CONTACT-ME" color="white"/>
         <Hr/>
         <address><em>
           8 Woodhill Street<br/>
