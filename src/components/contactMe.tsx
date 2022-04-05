@@ -6,7 +6,8 @@ import {Header} from './header/header';
 export default function contactMe() {
     return (
       <div>
-        <Header text="CONTACT_ME"/>
+        <Fragment>
+        <Header text="CONTACT-ME"/>
         <Hr/>
         <address><em>
           8 Woodhill Street<br/>
@@ -19,6 +20,7 @@ export default function contactMe() {
             <h4>Mixed Berry Tart.</h4>
             <h6>Raspberries, blueberries, and strawberries on top of a creamy filling served in a crispy tart.</h6>
           </details>
+        </Fragment>
       </div>
     );
 }

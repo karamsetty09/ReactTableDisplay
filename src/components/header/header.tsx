@@ -10,8 +10,8 @@ export function Header(Props: Props) {
     const letterStyle: CSS.Properties = {
       padding: "1rem",
       margin: "1rem",
-      backgroundColor: "#ffde00",
-      color:"#333",
+      backgroundColor: "#008080",
+      color:"white",
       display: "inline-block",
       fontFamily: "monospace",
       fontSize: "1.5rem",
