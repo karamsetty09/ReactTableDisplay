@@ -14,11 +14,17 @@
 }
 
 /*flex basis for the above declared header-flex*/
-.header-a .header-b {
+.header-a {
+  flex-basis: 20%;
+}
+
+.header-b {
   flex-basis: 60%;
 }
+
 .header-c {
   flex-basis: 20%;
+  align-content: right;
 }
 
 .name {

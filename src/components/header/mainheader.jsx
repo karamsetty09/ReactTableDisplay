@@ -27,40 +27,39 @@ const MainHeader = (props) => {
               {" "}
               <h3>
                 {" "}
-                <Typical
+                {/* <Typical
                   loop={Infinity}
                   steps={[
                     "Enthusiastic Dev ",
-                    3000,
+                    5000,
 
                     "Full Stack Developer ",
-                    3000,
+                    5000,
 
                     "Cross Platform v ",
-                    3000,
+                    5000,
 
                     "Enthusiastic Dev ",
-                    3000,
+                    5000,
 
                     "React, Vue.js Dev ",
-                    3000,
+                    5000,
                   ]}
-                />
+                />  */}
               </h3>
             </span>
             <span className="profile-role-tagline">
               Knack of building applications with front and back end
             </span>
             <br />
+            <h6>Date : {date}</h6>
             <div class="line-1"></div>
           </div>
         </center>
       </div>
       <div className="header-c">
         <h2>Time : {time.toLocaleTimeString()}</h2>
-        <h6>     Date : {date}</h6>
         <button className="button"> Hire Me </button>
-
         <a href="sandeep_Resume.pdf" download="VenkataResume.pdf">
           <button className="button">Download Resume</button>
         </a>

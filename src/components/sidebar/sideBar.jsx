@@ -6,51 +6,26 @@ import { FcBusinessman, FcFilm, FcSettings, FcClapperboard, FcGraduationCap, FcP
 import './sideBar.scss';
 
 export default function sideBar() {
+  const links  = [
+    {id: 1, title: 'Personal Portfolio', link: '/', logo: <FaGithub />},
+    // {id: 1, title: 'Education', link: '/', logo: <FaGithub />},
+    {id: 2, title: 'ToDo-app', link: '/todo', logo: <FcTodoList />},
+    {id: 3, title: 'Movies-app', link: '/movies', logo: <FcFilm />},
+    {id: 4, title: 'Contact Me', link: '/contactme', logo: <FcPhone />},
+    {id: 5, title: 'Table Name', link: '/tablename', logo: <GrApps />}
+  ];
+  const listItems = links.map((link) =>
+    <li key={link.id}>
+      <div>
+      <NavLink to={link.link}>{link.logo}{link.title}</NavLink>
+      </div>
+    </li>
+  );
   return (
     <div className="sidebar">
       <h2>__Apps & portfolio__</h2>
       <br/>
-      <ul>
-        <li>
-          <div>
-            <FcHome />
-            <FcBusinessman />
-            <FaGithub />
-            <NavLink to="/">Personal Profile</NavLink>
-          </div>
-        </li>
-        <li>
-          <div>
-            <FcTodoList />
-            <NavLink to="/todo">ToDo-app</NavLink>
-          </div>
-        </li>
-        <li>
-          <div>
-            <FcFilm />
-            <FcClapperboard />
-            <NavLink to="/movies">Movies-app</NavLink>
-          </div>
-        </li>
-        <li>
-          <div>
-            <FcPhone />
-            <NavLink to="/contactme">Contact Me</NavLink>
-          </div>
-        </li>
-        <li>
-          <div>
-            <GrApps />
-            <NavLink to="/tablename">Table Name</NavLink>
-          </div>
-        </li>
-        <li>
-          <div>
-            <FcGraduationCap />
-            <FcSettings />
-          </div>
-        </li>
-      </ul>
+      <ul>{listItems}</ul>
     </div>
   );
 }
