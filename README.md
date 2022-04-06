@@ -4,6 +4,18 @@
 
 Single Page Application to present my react application skills
 
+## Technologies used:
+
+React
+
+Typescript
+
+Javascript
+
+Jest
+
+Librearies: scss, jsx, moment
+
 ## Running and Testing
 
 Clone the repository: `git clone ...`

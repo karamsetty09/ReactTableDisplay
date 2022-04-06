@@ -2,13 +2,15 @@ import React from 'react'
 import Typical from "react-typical";
 import Profilepic from '../common/profilepic';
 import {useState, useEffect} from "react";
+import moment from 'moment';
 
 import './header.scss';
 
 const MainHeader = (props) => {
   const [time, setTime] = useState(new Date());
+  const [date, setDate] = useState(moment().format('MMMM Do YYYY, h:mm:ss a'));
   useEffect(() => {
-    const timer = setTimeout(() => setTime(new Date()), 1000);
+    const timer = setTimeout(() => setTime(new Date(), setDate(moment().format('MMMM Do YYYY, h:mm:ss a'))), 1000);
     return () => clearTimeout(timer);
   });
   return (
@@ -55,7 +57,8 @@ const MainHeader = (props) => {
         </center>
       </div>
       <div className="header-c">
-        <h1> {time.toLocaleTimeString()}</h1>
+        <h2>Time : {time.toLocaleTimeString()}</h2>
+        <h6>     Date : {date}</h6>
         <button className="button"> Hire Me </button>
 
         <a href="sandeep_Resume.pdf" download="VenkataResume.pdf">
