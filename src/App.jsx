@@ -34,20 +34,17 @@ export default function App() {
     }
   );
     return (
-        <HashRouter>
-          <main className="App">
-            <MainHeader name="Venkata" />
-          </main>
-          <section className='wrapper'>
-            <section className="app-a">
-            <SideBar></SideBar>
-            </section>
-            <section className="app-b">
+      <HashRouter>
+        <div class="wrapper">
+          <MainHeader class="header" name="Venkata" />
+          <SideBar class="sidebar"></SideBar>
+          <article class="content">
             {routeLinks}
-            </section>
-          </section>
-        </HashRouter>
-    );
+          </article>
+          <footer class="footer">My footer</footer>
+        </div>
+      </HashRouter>
+  );
 }
 
 

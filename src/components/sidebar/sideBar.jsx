@@ -25,7 +25,7 @@ export default function sideBar() {
   );
   return (
     <div className="sidebar">
-      <h2>__Apps & portfolio__</h2>
+      <h1>__Apps & portfolio__</h1>
       <br/>
       <ul>{listItems}</ul>
     </div>

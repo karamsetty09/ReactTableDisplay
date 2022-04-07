@@ -1,15 +1,8 @@
 .sidebar {
-  border: 1px solid #c7ea46;
+  background-color: #c7ea46;
   float: left;
-  width: 100%;
-  height: 100%;
   color: #008080;
   text-indent: 30px;
-}
-
-.h2 {
-  font-family: var(--mono);
-  color: #008080;
 }
 
 h1,
@@ -17,11 +10,10 @@ h2,
 p,
 ul,
 li {
-  font-family: sans-serif;
+  font-family: var(--mono);
 }
 
 ul li {
   padding: 10px;
   text-align: left;
-  color: #008080;
 }

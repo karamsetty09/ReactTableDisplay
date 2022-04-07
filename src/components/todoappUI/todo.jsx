@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.scss';
+import './todo.scss';
 
 function App() {
   const [todos, setTodos] = useState([
