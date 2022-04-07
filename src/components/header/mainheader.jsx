@@ -2,13 +2,15 @@ import React from 'react'
 import Typical from "react-typical";
 import Profilepic from '../common/profilepic';
 import {useState, useEffect} from "react";
+import moment from 'moment';
 
 import './header.scss';
 
 const MainHeader = (props) => {
   const [time, setTime] = useState(new Date());
+  const [date, setDate] = useState(moment().format('MMMM Do YYYY, h:mm:ss a'));
   useEffect(() => {
-    const timer = setTimeout(() => setTime(new Date()), 1000);
+    const timer = setTimeout(() => setTime(new Date(), setDate(moment().format('MMMM Do YYYY, h:mm:ss a'))), 1000);
     return () => clearTimeout(timer);
   });
   return (
@@ -25,39 +27,39 @@ const MainHeader = (props) => {
               {" "}
               <h3>
                 {" "}
-                <Typical
+                {/* <Typical
                   loop={Infinity}
                   steps={[
                     "Enthusiastic Dev ",
-                    3000,
+                    5000,
 
                     "Full Stack Developer ",
-                    3000,
+                    5000,
 
                     "Cross Platform v ",
-                    3000,
+                    5000,
 
                     "Enthusiastic Dev ",
-                    3000,
+                    5000,
 
                     "React, Vue.js Dev ",
-                    3000,
+                    5000,
                   ]}
-                />
+                />  */}
               </h3>
             </span>
             <span className="profile-role-tagline">
               Knack of building applications with front and back end
             </span>
             <br />
+            <h6>Date : {date}</h6>
             <div class="line-1"></div>
           </div>
         </center>
       </div>
       <div className="header-c">
-        <h1> {time.toLocaleTimeString()}</h1>
+        <h2>Time : {time.toLocaleTimeString()}</h2>
         <button className="button"> Hire Me </button>
-
         <a href="sandeep_Resume.pdf" download="VenkataResume.pdf">
           <button className="button">Download Resume</button>
         </a>

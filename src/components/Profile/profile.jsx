@@ -1,13 +1,14 @@
 
 import React from 'react';
 import Hr from '../common/hr';
+import { Header } from '../header/header';
 import './profile.scss';
 
 export default function profile() {
   return (
     <div>
       <Hr/>
-      <h1 class="profile-container">Personal Profile</h1>
+      <Header color="white" text="PERSONAL-PROFILE"/>
       <Hr/>
       <br />
       <p>
