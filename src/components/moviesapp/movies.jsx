@@ -1,12 +1,11 @@
 
 import React, { Component } from 'react';
 import { getMovies } from '../services/fakeMovieService';
-import MoviesTable from './moviesTable';
-import Pagination from './common/pagination';
+import { getGenres } from "../services/fakeGenreService";
+import MoviesTable from './moviesTable.tsx';
+import Pagination from '../common/pagination';
 import { paginate } from "../utils/paginate";
-import ListGroup from "./common/listGroup";
-import {getGenres} from "../services/fakeGenreService";
-
+import ListGroup from "../common/listGroup";
 
 class Movies extends Component {
     state = { 
@@ -72,9 +71,6 @@ class Movies extends Component {
         </div>
 
         </div>
-        
-        
-        
         );
     }
 }

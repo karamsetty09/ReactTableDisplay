@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Like from './common/like';
+import Like from '../common/like';
 
-const MoviesTable = props => {
+const MoviesTable = (props: any) => {
     const {movies, onDelete, onLike} = props;
     return ( 
         <table className="table">
@@ -16,7 +16,7 @@ const MoviesTable = props => {
                 </tr>
             </thead>
             <tbody>
-                {movies.map(movie => (
+                {movies.map( (movie: any) => (
                     <tr key={movie._id}>
                         <td>{movie.title}</td>
                         <td>{movie.genre.name}</td>

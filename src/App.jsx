@@ -1,5 +1,5 @@
-import TableName from './components/tableName';
-import Movies from './components/movies';
+import TableName from './components/tableName.tsx';
+import Movies from './components/moviesapp/movies';
 import Todo from './components/todoappUI/todo';
 import ContactMe from './components/contactMe.tsx';
 import Profile from './components/Profile/profile';
