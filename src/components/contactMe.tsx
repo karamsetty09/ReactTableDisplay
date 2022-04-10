@@ -1,11 +1,21 @@
 import React, { useState, Fragment } from "react";
 import Hr from './common/hr';
 import {Header} from './header/header';
+import {createStore, compose, applyMiddleware, bindActionCreators} from "redux";
 
 export default function ContactMe() {
   const [isGreen, setIsGreen] = useState(true);
+  
+  const makeLouder = (string: string) => string.toUpperCase();
+  const repeatThreeTimes = (string: string) => string.repeat(3);
+  const embolden = (string: string) => string.bold(); 
+
+  const normal = (string: string) => embolden(repeatThreeTimes(makeLouder(string)));
+  console.log(normal("normal"));
+  const make = compose(embolden, repeatThreeTimes, makeLouder);
+  console.log(make('store_compose '));
+  
     return (
-      <div>
         <Fragment>
         <Header text="CONTACT-ME" color="white"/>
         <Hr/>
@@ -26,7 +36,6 @@ export default function ContactMe() {
             <h6>Raspberries, blueberries, and strawberries on top of a creamy filling served in a crispy tart.</h6>
           </details>
         </Fragment>
-      </div>
     );
 }
 
