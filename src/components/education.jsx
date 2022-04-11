@@ -1,8 +1,11 @@
-import React from 'react';
+import React ,{ Fragment } from 'react';
 
 
-export default function Education() {
+ function Education() {
   return (
-    <div>Education</div>
+    <div>
+      <h1>Education</h1>
+    </div>
   )
 }
+export default Education;

@@ -19,13 +19,13 @@ import {
 export default function App() {
     const Routes = [
       {id: 1, title: 'Personal Portfolio', path: '/', component: Profile},
-      {id: 2, title: 'Education', link: '/education', component: Education},
+      {id: 2, title: 'Education', path: '/education', component: Education},
       {id: 3, title: 'ToDo-app', path: '/todo', component: Todo},
       {id: 4, title: 'Movies-app', path: '/movies', component: Movies},
       {id: 5, title: 'Contact Me', path: '/contactme', component: ContactMe },
       {id: 6, title: 'Table Name', path: '/tablename', component: TableName},
       {id: 7, title: 'Learning', path: '/learnings', component: Learnings},
-      {id: 8, title: 'Settings', link: '/settings', component: Settings},
+      {id: 8, title: 'Settings', path: '/settings', component: Settings},
     ];
     const routeLinks = Routes.map((route) =>
     {

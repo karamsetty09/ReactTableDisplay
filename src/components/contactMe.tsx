@@ -16,6 +16,7 @@ export default function ContactMe() {
   console.log(make('store_compose '));
   
     return (
+      <div>
         <Fragment>
         <Header text="CONTACT-ME" color="white"/>
         <Hr/>
@@ -36,6 +37,8 @@ export default function ContactMe() {
             <h6>Raspberries, blueberries, and strawberries on top of a creamy filling served in a crispy tart.</h6>
           </details>
         </Fragment>
+      </div>
+        
     );
 }
 
