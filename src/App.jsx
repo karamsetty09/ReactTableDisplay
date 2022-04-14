@@ -8,7 +8,8 @@ import Education from './components/education';
 import Profile from './components/Profile/profile';
 import MainHeader from './components/header/mainheader';
 import SideBar from './components/sidebar/sideBar.jsx';
-import React from 'react';
+import CounterApp from './components/CounterApp/counter';
+import React, { Fragment } from 'react';
 import './App.scss';
 
 import {
@@ -26,25 +27,25 @@ export default function App() {
       {id: 6, title: 'Table Name', path: '/tablename', component: TableName},
       {id: 7, title: 'Learning', path: '/learnings', component: Learnings},
       {id: 8, title: 'Settings', path: '/settings', component: Settings},
+      {id: 9, title: 'Counter-App', path: '/counterapp', component: CounterApp},
     ];
-    const routeLinks = Routes.map((route) =>
+    function RouteLinks ({item})
     {
       return (
-        route.id === 1 ? 
-        <Route key={route.id} exact path={route.path} component={route.component}/>
-        : <Route key={route.id} path={route.path} component={route.component}/>
+          item.id === 1 ? 
+          <Route key={item.id} exact path={item.path} component={item.component}/>
+          : <Route key={item.id} path={item.path} component={item.component}/>
       ); 
     }
-  );
     return (
       <HashRouter>
-        <div class="wrapper">
-          <MainHeader class="header" name="Venkata" />
-          <SideBar class="sidebar"></SideBar>
-          <article class="content">
-            {routeLinks}
-          </article>
-          <footer class="footer">My footer</footer>
+        <div className="wrapper">
+          <MainHeader className="header" name="Venkata" />
+          <SideBar className="sidebar"></SideBar>
+          <dl>
+            {Routes.map(item => (<RouteLinks item={item} key={item.id} />))}
+          </dl>
+          <footer className="footer">My footer</footer>
         </div>
       </HashRouter>
   );

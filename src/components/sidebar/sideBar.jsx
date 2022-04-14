@@ -15,9 +15,10 @@ export default function sideBar() {
     {id: 6, title: 'Table Name', link: '/tablename', logo: <GrApps />},
     {id: 7, title: 'Learning', link: '/learnings', logo: <FcHome />},
     {id: 8, title: 'Settings', link: '/settings', logo: <FcSettings />},
+    {id: 9, title: 'Counter-App', link: '/counterapp', logo: <FcClapperboard />},
   ];
-  const listItems = links.map((link) =>
-    <li key={link.id}>
+  const listItems = links.map((link, index) =>
+    <li key={index}>
       <div>
       <NavLink to={link.link}>{link.logo}{link.title}</NavLink>
       </div>

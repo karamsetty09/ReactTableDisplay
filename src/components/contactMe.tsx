@@ -38,7 +38,6 @@ export default function ContactMe() {
           </details>
         </Fragment>
       </div>
-        
     );
 }
 
