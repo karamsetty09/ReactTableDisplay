@@ -6,6 +6,7 @@ import MoviesTable from './moviesTable.tsx';
 import Pagination from '../common/pagination';
 import { paginate } from "../utils/paginate";
 import ListGroup from "../common/listGroup";
+import { Header } from '../header/header';
 
 class Movies extends Component {
     state = { 
@@ -53,6 +54,9 @@ class Movies extends Component {
 
         return (
         <div className="row">
+        <hr></hr>
+        <Header color="white" text="Displaying-Movies"/>
+        <hr></hr>
         <div className="col-2">
             <ListGroup 
             items={this.state.genres} 

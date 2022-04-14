@@ -9,7 +9,6 @@ import Profile from './components/Profile/profile';
 import MainHeader from './components/header/mainheader';
 import SideBar from './components/sidebar/sideBar.jsx';
 import CounterApp from './components/CounterApp/counter';
-import React, { Fragment } from 'react';
 import './App.scss';
 
 import {

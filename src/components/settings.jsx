@@ -1,8 +1,20 @@
 import React from 'react'
+import Hr from './common/hr';
+import { Header } from './header/header';
+
 
 function Settings() {
+  const center = {
+    textAlign: 'center',
+  };
   return (
-    <div><h1>Settings</h1></div>
+    <div>
+      <hr/>
+      <div style={center}>
+        <Header text="Settings" color="white"/>
+      </div>
+      <Hr/>
+    </div>
   )
 }
 

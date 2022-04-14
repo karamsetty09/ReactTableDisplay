@@ -1,4 +1,6 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import Hr from './common/hr';
+import { Header } from './header/header';
 import {createStore, compose, applyMiddleware, bindActionCreators, combineReducers} from "redux";
 
 function Learnings() {
@@ -54,9 +56,17 @@ function Learnings() {
   
   console.log(store.getState());
 
+  const center = {
+    textAlign: 'center',
+  };
+
   return (
     <div>
-      <h1>Learnings</h1>
+      <hr/>
+      <div style={center}>
+      <Header text="Learnings" color="white"/>
+      </div>
+      <Hr/>
     </div>
   )
 }

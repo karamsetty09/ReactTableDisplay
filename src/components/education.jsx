@@ -1,4 +1,6 @@
 import React ,{ Fragment } from 'react';
+import Hr from './common/hr';
+import { Header } from './header/header';
 import {createStore, compose, applyMiddleware, bindActionCreators, combineReducers} from "redux";
 
 function Education() {
@@ -46,10 +48,14 @@ function Education() {
   const title = { title: 'hello' };
   store.dispatch(addTask(title));
   console.log(store.getState());
-  
+  const center = {
+    textAlign: 'center',
+  };
   return (
-    <div>
-      <h1>Education</h1>
+    <div style={center}>
+      <hr/>
+        <Header  text="EDUCATION" color="white"/>
+      <Hr/>
     </div>
   )
 }

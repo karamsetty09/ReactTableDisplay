@@ -14,11 +14,16 @@ export default function ContactMe() {
   console.log(normal("normal"));
   const make = compose(embolden, repeatThreeTimes, makeLouder);
   console.log(make('store_compose '));
-  
+  const center = {
+    textAlign: 'center',
+  };
     return (
       <div>
         <Fragment>
+        <hr/>
+        <div>
         <Header text="CONTACT-ME" color="white"/>
+        </div>
         <Hr/>
         <address>
           <em>
