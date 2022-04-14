@@ -4,6 +4,7 @@ import { Header } from '../header/header';
 import {useDispatch, useSelector} from 'react-redux';
 import './counter.scss';
 import {decrement, increment, set} from './actions';
+import SetCounter from './SetCounter';
 
 const CounterApp = () => {
     const center = {
@@ -28,8 +29,8 @@ const CounterApp = () => {
             <button onClick={()=>dispatch(set(0))}>Reset</button>
             <button onClick={()=>dispatch(decrement())}>Decrement</button>
           </section>
+          <SetCounter/>
     </main>
-  );
     </div>
   )
 }
