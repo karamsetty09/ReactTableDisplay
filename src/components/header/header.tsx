@@ -17,12 +17,12 @@ export function Header(props: Props) {
       fontSize: "1.5rem",
       textAlign: "center",
     }
-    function styling(text: string) {
-      return <div style={letterStyle}>{text}</div>
+    function styling(text: string, index: number) {
+      return <div style={letterStyle} key={index}>{text}</div>
     }    
   return (
     <Fragment>
-      {props.text.split('').map(character => styling(character))}
+      {props.text.split('').map((character, index) => styling(character, index))}
     </Fragment>
   )
 }

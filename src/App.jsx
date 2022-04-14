@@ -1,11 +1,14 @@
-import TableName from './components/tableName';
-import Movies from './components/movies';
+import TableName from './components/tableName.tsx';
+import Movies from './components/moviesapp/movies';
 import Todo from './components/todoappUI/todo';
 import ContactMe from './components/contactMe.tsx';
+import Learnings from './components/learning';
+import Settings from './components/settings';
+import Education from './components/education';
 import Profile from './components/Profile/profile';
 import MainHeader from './components/header/mainheader';
 import SideBar from './components/sidebar/sideBar.jsx';
-import React from 'react';
+import CounterApp from './components/CounterApp/counter';
 import './App.scss';
 
 import {
@@ -16,32 +19,32 @@ import {
 export default function App() {
     const Routes = [
       {id: 1, title: 'Personal Portfolio', path: '/', component: Profile},
-      // {id: 1, title: 'Education', link: '/education', logo: <FcGraduationCap />},
-      // Education should hold the details to my 10th, Bachelor's and Masters.
-      {id: 2, title: 'ToDo-app', path: '/todo', component: Todo},
-      {id: 3, title: 'Movies-app', path: '/movies', component: Movies},
-      {id: 4, title: 'Contact Me', path: '/contactme', component: ContactMe },
-      {id: 5, title: 'Table Name', path: '/tablename', component: TableName}
-      // {id: 6, title: 'Settings', link: '/settings', logo: <FcGraduationCap />},
+      {id: 2, title: 'Education', path: '/education', component: Education},
+      {id: 3, title: 'ToDo-app', path: '/todo', component: Todo},
+      {id: 4, title: 'Movies-app', path: '/movies', component: Movies},
+      {id: 5, title: 'Contact Me', path: '/contactme', component: ContactMe },
+      {id: 6, title: 'Table Name', path: '/tablename', component: TableName},
+      {id: 7, title: 'Learning', path: '/learnings', component: Learnings},
+      {id: 8, title: 'Settings', path: '/settings', component: Settings},
+      {id: 9, title: 'Counter-App', path: '/counterapp', component: CounterApp},
     ];
-    const routeLinks = Routes.map((route) =>
+    function RouteLinks ({item})
     {
       return (
-        route.id === 1 ? 
-        <Route key={route.id} exact path={route.path} component={route.component}/>
-        : <Route key={route.id} path={route.path} component={route.component}/>
+          item.id === 1 ? 
+          <Route key={item.id} exact path={item.path} component={item.component}/>
+          : <Route key={item.id} path={item.path} component={item.component}/>
       ); 
     }
-  );
     return (
       <HashRouter>
-        <div class="wrapper">
-          <MainHeader class="header" name="Venkata" />
-          <SideBar class="sidebar"></SideBar>
-          <article class="content">
-            {routeLinks}
-          </article>
-          <footer class="footer">My footer</footer>
+        <div className="wrapper">
+          <MainHeader className="header" name="Venkata" />
+          <SideBar className="sidebar"></SideBar>
+          <dl>
+            {Routes.map(item => (<RouteLinks item={item} key={item.id} />))}
+          </dl>
+          <footer className="footer">My footer</footer>
         </div>
       </HashRouter>
   );

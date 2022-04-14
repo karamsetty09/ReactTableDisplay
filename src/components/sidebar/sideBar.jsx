@@ -2,22 +2,23 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { FaGithub} from "react-icons/fa";
 import { GrApps } from "react-icons/gr";
-import { FcBusinessman, FcFilm, FcSettings, FcClapperboard, FcGraduationCap, FcPhone, FcTodoList, FcHome } from "react-icons/fc";
+import { FcFilm, FcSettings, FcClapperboard, FcGraduationCap, FcPhone, FcTodoList, FcHome } from "react-icons/fc";
 import './sideBar.scss';
 
 export default function sideBar() {
   const links  = [
     {id: 1, title: 'Personal Portfolio', link: '/', logo: <FaGithub />},
-    // {id: 1, title: 'Education', link: '/education', logo: <FcGraduationCap />},
-    // Education should hold the details to my 10th, Bachelor's and Masters.
-    {id: 2, title: 'ToDo-app', link: '/todo', logo: <FcTodoList />},
-    {id: 3, title: 'Movies-app', link: '/movies', logo: <FcFilm />},
-    {id: 4, title: 'Contact Me', link: '/contactme', logo: <FcPhone />},
-    {id: 5, title: 'Table Name', link: '/tablename', logo: <GrApps />}
-    // {id: 6, title: 'Settings', link: '/settings', logo: <FcGraduationCap />},
+    {id: 2, title: 'Education', link: '/education', logo: <FcGraduationCap />},
+    {id: 3, title: 'ToDo-app', link: '/todo', logo: <FcTodoList />},
+    {id: 4, title: 'Movies-app', link: '/movies', logo: <FcFilm />},
+    {id: 5, title: 'Contact Me', link: '/contactme', logo: <FcPhone />},
+    {id: 6, title: 'Table Name', link: '/tablename', logo: <GrApps />},
+    {id: 7, title: 'Learning', link: '/learnings', logo: <FcHome />},
+    {id: 8, title: 'Settings', link: '/settings', logo: <FcSettings />},
+    {id: 9, title: 'Counter-App', link: '/counterapp', logo: <FcClapperboard />},
   ];
-  const listItems = links.map((link) =>
-    <li key={link.id}>
+  const listItems = links.map((link, index) =>
+    <li key={index}>
       <div>
       <NavLink to={link.link}>{link.logo}{link.title}</NavLink>
       </div>

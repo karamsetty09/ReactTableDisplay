@@ -45,7 +45,7 @@ const MainHeader = (props) => {
                     "React, Vue.js Dev ",
                     5000,
                   ]}
-                />  */}
+                />   */}
               </h3>
             </span>
             <span className="profile-role-tagline">
@@ -53,7 +53,7 @@ const MainHeader = (props) => {
             </span>
             <br />
             <h6>Date : {date}</h6>
-            <div class="line-1"></div>
+            <div className="line-1"></div>
           </div>
         </center>
       </div>

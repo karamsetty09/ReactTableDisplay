@@ -1,13 +1,29 @@
 import React, { useState, Fragment } from "react";
 import Hr from './common/hr';
 import {Header} from './header/header';
+import {createStore, compose, applyMiddleware, bindActionCreators} from "redux";
 
 export default function ContactMe() {
   const [isGreen, setIsGreen] = useState(true);
+  
+  const makeLouder = (string: string) => string.toUpperCase();
+  const repeatThreeTimes = (string: string) => string.repeat(3);
+  const embolden = (string: string) => string.bold(); 
+
+  const normal = (string: string) => embolden(repeatThreeTimes(makeLouder(string)));
+  console.log(normal("normal"));
+  const make = compose(embolden, repeatThreeTimes, makeLouder);
+  console.log(make('store_compose '));
+  const center = {
+    textAlign: 'center',
+  };
     return (
       <div>
         <Fragment>
+        <hr/>
+        <div>
         <Header text="CONTACT-ME" color="white"/>
+        </div>
         <Hr/>
         <address>
           <em>

@@ -5,12 +5,16 @@ import { Header } from '../header/header';
 import './profile.scss';
 
 export default function profile() {
+  const center = {
+    textAlign: 'center',
+  };
   return (
     <div>
-      <Hr/>
+      <hr/>
+      <div style={center}>
       <Header color="white" text="PERSONAL-PROFILE"/>
+      </div>
       <Hr/>
-      <br />
       <p>
         To excel as a software developer through hard work, perseverance and
         innovation. To be part of a leading company where I can get
@@ -18,7 +22,7 @@ export default function profile() {
         goals and objectives with zeal and passion.
       </p>
       <Hr/>
-      <h3>Skills</h3>
+      <Header style={center} color="white" text="SKILLS"/>
       <section className="wrapper">
         <section className="a">
           <p>

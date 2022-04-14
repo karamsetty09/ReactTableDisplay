@@ -14,7 +14,7 @@ Javascript
 
 Jest
 
-Librearies: scss, jsx, moment
+Librearies: scss, jsx, moment, redux
 
 ## Running and Testing
 
