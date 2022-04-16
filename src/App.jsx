@@ -9,6 +9,8 @@ import Profile from './components/Profile/profile';
 import MainHeader from './components/header/mainheader';
 import SideBar from './components/sidebar/sideBar.jsx';
 import CounterApp from './components/CounterApp/counter';
+import Footer from './components/footer/footer';
+
 import './App.scss';
 
 import {
@@ -44,7 +46,7 @@ export default function App() {
           <dl>
             {Routes.map(item => (<RouteLinks item={item} key={item.id} />))}
           </dl>
-          <footer className="footer">My footer</footer>
+          <Footer></Footer>
         </div>
       </HashRouter>
   );

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './calculate.scss';
 
 const scaleNames = {
     c: 'Celsius',
@@ -17,6 +18,7 @@ const TemperatureInput = (props) => {
     <fieldset>
         <legend>Enter temperature in {scaleNames[scale]}:</legend>
         <input
+          type="text"
           value={temperature}
           onChange={handleChange} />
     </fieldset>
