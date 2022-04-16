@@ -32,8 +32,8 @@ export default function App() {
     {
       return (
           item.id === 1 ? 
-          <Route key={item.id} exact path={item.path} component={item.component}/>
-          : <Route key={item.id} path={item.path} component={item.component}/>
+          <Route exact path={item.path} component={item.component}/>
+          : <Route path={item.path} component={item.component}/>
       ); 
     }
     return (
