@@ -19,16 +19,20 @@ export default function sideBar() {
   ];
   const listItems = links.map((link, index) =>
     <li key={index}>
-      <div>
-      <NavLink to={link.link}>{link.logo}{link.title}</NavLink>
-      </div>
+      <a>
+      <NavLink to={link.link}>
+        {link.logo} &nbsp; 
+        {link.title}
+      </NavLink>
+      </a>
     </li>
   );
   return (
-    <div className="sidebar">
-      <h1>__Apps & portfolio__</h1>
-      <br/>
-      <ul>{listItems}</ul>
+    <div id="sidebar" className="sidebar">
+      <nav className='round'>
+        <h3>__Apps & portfolio__</h3>
+        <>{listItems}</>
+      </nav>
     </div>
   );
 }

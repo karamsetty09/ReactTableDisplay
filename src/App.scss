@@ -4,8 +4,12 @@
   box-sizing: border-box;
 }
 
+.font-link {
+  font-family: "Pacifico", cursive;
+}
+
 body {
-  margin: 40px;
+  margin: 0;
   font-family: "Open Sans", "sans-serif";
 }
 
@@ -18,11 +22,16 @@ p {
 .sidebar {
   float: left;
   width: 19.1489%;
+  margin: 0;
 }
 
 .content {
   float: right;
   width: 79.7872%;
+  margin: 0;
+  border: 2px solid #008080;
+  border-radius: 12px;
+  padding: 5px;
 }
 
 /* make a grid */

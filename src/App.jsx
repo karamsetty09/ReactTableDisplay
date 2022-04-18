@@ -43,9 +43,9 @@ export default function App() {
         <div className="wrapper">
           <MainHeader className="header" name="Venkata" />
           <SideBar className="sidebar"></SideBar>
-          <dl>
+          <div className="content">
             {Routes.map(item => (<RouteLinks item={item} key={item.id} />))}
-          </dl>
+          </div>
           <Footer></Footer>
         </div>
       </HashRouter>
