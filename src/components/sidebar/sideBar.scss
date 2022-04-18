@@ -31,7 +31,6 @@ nav {
   font-family: var(--mono);
   font-size: 80%;
   padding: 1rem;
-  background-color: #c7ea46;
 }
 
 // to display round along the nav bar.
@@ -49,13 +48,16 @@ nav ul h3 {
 nav li {
   text-align: left;
   list-style-type: none;
-  padding: 10px;
-  margin: 2;
+  padding: 20px;
+  margin: 6px;
   display: block;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  border: 2px solid #008080;
+  border-radius: 12px;
+  background-color: #c7ea46;
 }
 
 // accessing nav->li->a to remove decoration.

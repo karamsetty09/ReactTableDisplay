@@ -1,6 +1,6 @@
 import React from 'react'
-import Hr from './common/hr';
-import { Header } from './header/header';
+import Hr from '../common/hr';
+import { Header } from '../header/header';
 import './settings.scss';
 
 

@@ -1,6 +1,8 @@
 import React ,{ Fragment } from 'react';
-import Hr from './common/hr';
-import { Header } from './header/header';
+import Hr from '../common/hr';
+import { Header } from '../header/header';
+import Circle from './Circle';
+import './education.scss';
 import {createStore, compose, applyMiddleware, bindActionCreators, combineReducers} from "redux";
 
 function Education() {
@@ -49,13 +51,36 @@ function Education() {
   store.dispatch(addTask(title));
   console.log(store.getState());
   const center = {
-    textAlign: 'center',
+    textAlign: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   };
+
+  var colors = [
+    {id: "#1C89BF", course: "Primary"}, 
+    {id: "#E94F37", course: "Bachelors"}, 
+    {id: "#393E41", course: "Masters" }, 
+    {id: "#A1D363", course: "Professional"}
+  ];
+  
+  const circles = colors.map((color, index) => 
+      <li >
+        <Circle key={index} course={color.course} bgColor={color.id}/>
+      </li>
+  );
+  
+  // To Make the thinks in oneline and make center.
+  const inline = {
+    display: "inline-block",
+  }
+  
+
   return (
     <div style={center}>
       <hr/>
         <Header  text="EDUCATION" color="white"/>
       <Hr/>
+      <div className='inline'>{circles}</div>
     </div>
   )
 }
