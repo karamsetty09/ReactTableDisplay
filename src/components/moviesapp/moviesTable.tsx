@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Like from '../common/like';
+import './moviesTable.scss';
 
 const MoviesTable = (props: any) => {
     const {movies, onDelete, onLike} = props;

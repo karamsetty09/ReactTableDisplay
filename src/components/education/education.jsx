@@ -1,7 +1,9 @@
-import React ,{ Fragment } from 'react';
+import React ,{ useState, Fragment, useEffect } from 'react';
 import Hr from '../common/hr';
 import { Header } from '../header/header';
 import Circle from './Circle';
+import SubjectsTable from './SubjectsTable';
+import { getMasters } from '../services/MastersCourse';
 import './education.scss';
 import {createStore, compose, applyMiddleware, bindActionCreators, combineReducers} from "redux";
 
@@ -52,8 +54,7 @@ function Education() {
   console.log(store.getState());
   const center = {
     textAlign: "center",
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "inline",
   };
 
   var colors = [
@@ -73,14 +74,21 @@ function Education() {
   const inline = {
     display: "inline-block",
   }
-  
 
+  const [table, setTable] = useState([]);
+
+  useEffect(() => {
+    setTable(getMasters());
+  }, [table]);
   return (
+    
     <div style={center}>
       <hr/>
         <Header  text="EDUCATION" color="white"/>
       <Hr/>
-      <div className='inline'>{circles}</div>
+        <div className='inline'>{circles}</div>
+      <Hr/>
+      <SubjectsTable table={table} />
     </div>
   )
 }

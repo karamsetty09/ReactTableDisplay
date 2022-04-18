@@ -7,6 +7,8 @@ import Pagination from '../common/pagination';
 import { paginate } from "../utils/paginate";
 import ListGroup from "../common/listGroup";
 import { Header } from '../header/header';
+import './movies.scss';
+import Hr from '../common/hr';
 
 class Movies extends Component {
     state = { 
@@ -14,7 +16,7 @@ class Movies extends Component {
         genres: [],
         currentPage: 1,
         pageSize: 4
-     }
+    }
 
      componentDidMount(){
          const genres = [{ name: 'All Generes'}, ...getGenres()]
@@ -53,27 +55,34 @@ class Movies extends Component {
         const movies = paginate(filtered, currentPage, pageSize);
 
         return (
-        <div className="row">
-        <hr></hr>
-        <Header color="white" text="Displaying-Movies"/>
-        <hr></hr>
-        <div className="col-2">
-            <ListGroup 
-            items={this.state.genres} 
-            selectedItem={this.state.selectedGenre}
-            onItemSelect={this.handleGenreSelect}/>
-        </div>
-        <div className="col">
-        <p>Showing {filtered.length} movies in the database.</p>
-        <MoviesTable movies={movies} onLike ={this.handleLike} onDelete={this.handleDelete} />
-        <Pagination 
-        itemsCount={filtered.length} 
-        pageSize={pageSize} 
-        currentPage={currentPage}
-        onPageChange={this.handlePageChange} 
-        />
-        </div>
-
+        <div >
+            <hr></hr>
+            <Header color="white" text="Displaying-Movies"/>
+            <Hr/>
+            <div className='full'>
+                <div className="side">
+                <ListGroup 
+                    items={this.state.genres} 
+                    selectedItem={this.state.selectedGenre}
+                    onItemSelect={this.handleGenreSelect}
+                />
+            </div>
+                <div className="tabledata">
+                <p>Showing {filtered.length} movies in the database.</p>
+                <MoviesTable 
+                    movies={movies} 
+                    onLike ={this.handleLike} 
+                    onDelete={this.handleDelete} 
+                />
+                <Pagination 
+                    itemsCount={filtered.length} 
+                    pageSize={pageSize} 
+                    currentPage={currentPage}
+                    onPageChange={this.handlePageChange} 
+                />
+                </div>
+            </div>
+            
         </div>
         );
     }
