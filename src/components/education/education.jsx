@@ -66,7 +66,7 @@ function Education() {
   
   const circles = colors.map((color, index) => 
       <li >
-        <Circle key={index} course={color.course} bgColor={color.id}/>
+        <Circle key={index} course={color.course} bgColor={color.id} />
       </li>
   );
   
@@ -80,8 +80,8 @@ function Education() {
   useEffect(() => {
     setTable(getMasters());
   }, [table]);
+
   return (
-    
     <div style={center}>
       <hr/>
         <Header  text="EDUCATION" color="white"/>
