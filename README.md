@@ -29,3 +29,11 @@ Test: `npm test`
 Run: `npm start`
 
 Access: `http://localhost:3000/ReactTableDisplay`
+
+## Docker:
+
+Command: sudo docker-compose build
+
+Command: sudo docker-compose up -d
+
+Command: sudo docker-compose down or cntrl + c
