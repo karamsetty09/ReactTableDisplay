@@ -1,13 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Hr from '../common/hr';
 import { Header } from '../header/header';
 import './settings.scss';
 
+import AppContext from '../contextAPI/app-context';
 
 function Settings() {
   const center = {
     textAlign: 'center',
   };
+
+  // accessing from context
+  const {theme, setTheme} = useContext(AppContext);
+
   return (
     <div>
       <hr/>
@@ -16,8 +21,17 @@ function Settings() {
         <Hr/>
         <div className='wrapper'>
           <div className='ColorBox'>
+            <div style={{background: theme ? "green":"red"}}>
             Application Color
-            <input></input>
+            <div>
+            {
+            theme ? 
+            <button onClick={()=>setTheme(false)}>Logout</button> : 
+            <button onClick={()=>setTheme(true)}>Login</button>
+            }
+            </div>
+            </div>
+            
           </div>
           <div className='FontBox'>
             Application font

@@ -2,7 +2,7 @@ import NotesApp from './components/NotesApp/notesApp.tsx';
 import Movies from './components/moviesapp/movies';
 import Todo from './components/todoappUI/todo';
 import ContactMe from './components/contactMe.tsx';
-import Learnings from './components/learning';
+import Learning from './components/Learnings/learning';
 import Settings from './components/settings/settings';
 import Education from './components/education/education';
 import Profile from './components/Profile/profile';
@@ -28,7 +28,7 @@ export default function App() {
       {id: 4, title: 'Movies-app', path: '/movies', component: Movies},
       {id: 5, title: 'Contact Me', path: '/contactme', component: ContactMe },
       {id: 6, title: 'Notes App', path: '/notesapp', component: NotesApp},
-      {id: 7, title: 'Learning', path: '/learnings', component: Learnings},
+      {id: 7, title: 'Learning', path: '/learnings', component: Learning},
       {id: 8, title: 'Settings', path: '/settings', component: Settings},
       {id: 9, title: 'Counter-App', path: '/counterapp', component: CounterApp},
     ];
