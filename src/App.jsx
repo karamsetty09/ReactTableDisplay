@@ -2,7 +2,7 @@ import NotesApp from './components/NotesApp/notesApp.tsx';
 import Movies from './components/moviesapp/movies';
 import Todo from './components/todoappUI/todo';
 import ContactMe from './components/contactMe.tsx';
-import Learning from './components/Learnings/learning';
+import Learning from './components/Learnings/Expenses/learning';
 import Settings from './components/settings/settings';
 import Education from './components/education/education';
 import Profile from './components/Profile/profile';
