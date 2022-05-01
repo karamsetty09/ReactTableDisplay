@@ -13,6 +13,12 @@
   margin-bottom: 1rem;
 }
 
+header.round {
+  border: 2px solid #008080;
+  border-radius: 12px;
+  padding: 5px;
+}
+
 /*flex basis for the above declared header-flex*/
 .header-a {
   flex-basis: 20%;

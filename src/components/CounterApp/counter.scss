@@ -52,7 +52,21 @@ form {
   font-weight: 700;
   margin: 2em auto;
   padding: 1em;
-  width: 600px;
+  width: 500px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.a {
+  grid-column: 1/2;
+}
+
+.b {
+  grid-column: 2/4;
 }
 
 .count {
@@ -61,6 +75,7 @@ form {
 }
 
 .controls {
+  font-size: 0.5em;
   display: flex;
   justify-content: center;
 }

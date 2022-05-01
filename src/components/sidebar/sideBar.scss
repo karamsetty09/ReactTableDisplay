@@ -5,6 +5,10 @@
   text-indent: 30px;
 }
 
+.font-link {
+  font-family: "Pacifico", cursive;
+}
+
 h1,
 h2,
 p,
@@ -14,6 +18,54 @@ li {
 }
 
 ul li {
-  padding: 10px;
+  padding: 20px;
   text-align: left;
+  color: aliceblue;
+}
+
+h3 {
+  text-align: left;
+}
+
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+// to display round along the nav bar.
+nav.round {
+  border: 2px solid #008080;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+nav ul h3 {
+  color: blueviolet;
+}
+
+// accessing nav->li to add styles.
+nav li {
+  text-align: left;
+  list-style-type: none;
+  padding: 20px;
+  margin: 6px;
+  display: block;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border: 2px solid #008080;
+  border-radius: 12px;
+  background-color: #c7ea46;
+}
+
+// accessing nav->li->a to remove decoration.
+nav li a {
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: blue;
 }

@@ -23,31 +23,6 @@ const MainHeader = (props) => {
         <center>
           <h1 className="name">Karamsetty. {props.name} Sandeep Kumar</h1>
           <div className="profile-details-role">
-            <span className="primary-text">
-              {" "}
-              <h3>
-                {" "}
-                {/* <Typical
-                  loop={Infinity}
-                  steps={[
-                    "Enthusiastic Dev ",
-                    5000,
-
-                    "Full Stack Developer ",
-                    5000,
-
-                    "Cross Platform v ",
-                    5000,
-
-                    "Enthusiastic Dev ",
-                    5000,
-
-                    "React, Vue.js Dev ",
-                    5000,
-                  ]}
-                />   */}
-              </h3>
-            </span>
             <span className="profile-role-tagline">
               Knack of building applications with front and back end
             </span>
