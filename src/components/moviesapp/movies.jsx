@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
 import { getGenres } from "../services/fakeGenreService";
 import MoviesTable from "./moviesTable.tsx";

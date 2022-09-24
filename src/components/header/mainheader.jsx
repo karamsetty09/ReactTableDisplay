@@ -1,5 +1,3 @@
-import React from "react";
-import Typical from "react-typical";
 import Profilepic from "../common/profilepic";
 import { useState, useEffect } from "react";
 import moment from "moment";

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Circle = (props) => {
   const circle = {
     padding: 10,

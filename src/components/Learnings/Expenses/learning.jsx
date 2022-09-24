@@ -4,13 +4,7 @@ import NewExpense from "../NewExpense/NewExpense";
 import "./Learning.css";
 import Expenses from "./Expenses";
 import { useState } from "react";
-import {
-  createStore,
-  compose,
-  applyMiddleware,
-  bindActionCreators,
-  combineReducers,
-} from "redux";
+import { createStore, compose, bindActionCreators } from "redux";
 
 const DUMMY_EXPENSES = [
   {

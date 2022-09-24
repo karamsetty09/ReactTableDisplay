@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { GrApps } from "react-icons/gr";

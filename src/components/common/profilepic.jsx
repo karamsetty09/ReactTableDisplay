@@ -1,4 +1,3 @@
-import React from "react";
 import image from "../assets/Home/2999AC0220334860873_P.jpg";
 export default function profilepic() {
   return (

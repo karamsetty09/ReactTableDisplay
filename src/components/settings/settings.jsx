@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Hr from "../common/hr";
 import { Header } from "../header/header";
 import "./settings.scss";

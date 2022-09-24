@@ -1,4 +1,3 @@
-import React from "react";
 import Hr from "../common/hr";
 import { Header } from "../header/header";
 import "./profile.scss";

@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useContext } from "react";
+import { useState, useReducer, useContext } from "react";
 
 import AppContext from "../contextAPI/app-context";
 

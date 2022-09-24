@@ -1,5 +1,3 @@
-import React from "react";
-
 const SubjectsTable = (props) => {
   const { table } = props;
   return (

@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Hr from "../common/hr";
 import { Header } from "../header/header";
 import Circle from "./Circle";
