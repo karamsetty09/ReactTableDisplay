@@ -1,7 +1,7 @@
 import React from "react";
 import Typical from "react-typical";
 
-import './Profile.css';
+import "./Profile.css";
 
 export default function Profile() {
   return (
@@ -34,7 +34,7 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-details-role">
-            <span className='primary-text'>
+            <span className="primary-text">
               {" "}
               <h1>
                 {" "}
@@ -63,18 +63,15 @@ export default function Profile() {
               Knack of building applications with front and back end
             </span>
             <div className="profile-optins">
-              <button className="btn highlighted-btn">
-                  {" "}
-                  Hire Me{" "}
-              </button>
-              <a href='sandeep_Resume.pdf' download="VenkataResume.pdf">
+              <button className="btn highlighted-btn"> Hire Me </button>
+              <a href="sandeep_Resume.pdf" download="VenkataResume.pdf">
                 <button className="btn highlighted-btn">Get Ressume</button>
               </a>
             </div>
           </div>
         </div>
-        <div className='profile-picture'>
-            <div className="profile-picture-background"></div>
+        <div className="profile-picture">
+          <div className="profile-picture-background"></div>
         </div>
       </div>
     </div>

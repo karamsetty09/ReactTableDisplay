@@ -1,16 +1,23 @@
-import React from 'react'
+import React from "react";
 import Typical from "react-typical";
-import Profilepic from '../common/profilepic';
-import {useState, useEffect} from "react";
-import moment from 'moment';
+import Profilepic from "../common/profilepic";
+import { useState, useEffect } from "react";
+import moment from "moment";
 
-import './header.scss';
+import "./header.scss";
 
 const MainHeader = (props) => {
   const [time, setTime] = useState(new Date());
-  const [date, setDate] = useState(moment().format('MMMM Do YYYY, h:mm:ss a'));
+  const [date, setDate] = useState(moment().format("MMMM Do YYYY, h:mm:ss a"));
   useEffect(() => {
-    const timer = setTimeout(() => setTime(new Date(), setDate(moment().format('MMMM Do YYYY, h:mm:ss a'))), 1000);
+    const timer = setTimeout(
+      () =>
+        setTime(
+          new Date(),
+          setDate(moment().format("MMMM Do YYYY, h:mm:ss a"))
+        ),
+      1000
+    );
     return () => clearTimeout(timer);
   });
   return (

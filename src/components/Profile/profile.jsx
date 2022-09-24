@@ -1,28 +1,27 @@
-
-import React from 'react';
-import Hr from '../common/hr';
-import { Header } from '../header/header';
-import './profile.scss';
+import React from "react";
+import Hr from "../common/hr";
+import { Header } from "../header/header";
+import "./profile.scss";
 
 export default function profile() {
   const center = {
-    textAlign: 'center',
+    textAlign: "center",
   };
   return (
     <div>
-      <hr/>
+      <hr />
       <div style={center}>
-      <Header color="white" text="PERSONAL-PROFILE"/>
+        <Header color="white" text="PERSONAL-PROFILE" />
       </div>
-      <Hr/>
+      <Hr />
       <p>
         To excel as a software developer through hard work, perseverance and
         innovation. To be part of a leading company where I can get
         opportunities to show my talent and enhance my skills. To meet company
         goals and objectives with zeal and passion.
       </p>
-      <Hr/>
-      <Header style={center} color="white" text="SKILLS"/>
+      <Hr />
+      <Header style={center} color="white" text="SKILLS" />
       <section className="wrapper">
         <section className="a">
           <p>

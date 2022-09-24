@@ -1,41 +1,41 @@
-import { useState } from 'react';
-import './todo.scss';
+import { useState } from "react";
+import "./todo.scss";
 
 function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: 'Finish React Series',
+      title: "Finish React Series",
       isComplete: false,
     },
     {
       id: 2,
-      title: 'Finish Vue.js series',
+      title: "Finish Vue.js series",
       isComplete: true,
     },
     {
       id: 3,
-      title: 'Finish Laravel series',
+      title: "Finish Laravel series",
       isComplete: false,
     },
     {
       id: 4,
-      title: 'Finish Vue App with Laravel by Axios',
+      title: "Finish Vue App with Laravel by Axios",
       iscomplete: true,
-    }
+    },
   ]);
 
   // constant to hold the user input.
-  const [todoInput, setTodoInput] = useState('');
+  const [todoInput, setTodoInput] = useState("");
   // constant to create the user ID.
   const [idForTodo, setidforTodo] = useState(3);
 
   // function module to add user input to todos created by useState.
-  function addTodo(event){
+  function addTodo(event) {
     event.preventDefault();
 
     // Handling empty input string
-    if(todoInput.trim().length === 0){
+    if (todoInput.trim().length === 0) {
       return;
     }
 
@@ -43,40 +43,41 @@ function App() {
     setTodos([
       ...todos,
       {
-      id: idForTodo,
-      title: todoInput,
-      isComplete: false,
-    },
+        id: idForTodo,
+        title: todoInput,
+        isComplete: false,
+      },
     ]);
 
     // Emptying the user input to prevent ambiguity
-    setTodoInput('');
+    setTodoInput("");
 
     // Handling increment in ID
-    setidforTodo(prevIdForTodo => prevIdForTodo + 1);
+    setidforTodo((prevIdForTodo) => prevIdForTodo + 1);
   }
 
   // function module to display data on screen of user input
-  function handleInput(event){                  
+  function handleInput(event) {
     setTodoInput(event.target.value);
   }
 
   // function module to handle deleting of todos
-  function deleteTodo(id){
-    setTodos([...todos].filter(todo=> todo.id != id));
+  function deleteTodo(id) {
+    setTodos([...todos].filter((todo) => todo.id != id));
   }
-
 
   return (
     <div className="todo-app-container">
       <div className="todo-app">
-      <h2>Todo App</h2>
-      
-        <form action="#" onSubmit={addTodo}>      {/* calling addTodo function to insert todos state. */}     
+        <h2>Todo App</h2>
+
+        <form action="#" onSubmit={addTodo}>
+          {" "}
+          {/* calling addTodo function to insert todos state. */}
           <input
             type="text"
-            value={todoInput}                     // assigning value to constant created on line 30
-            onChange={handleInput}                // assigning onChange event to display user changes. 
+            value={todoInput} // assigning value to constant created on line 30
+            onChange={handleInput} // assigning onChange event to display user changes.
             className="todo-input"
             placeholder="What do you need to do?"
           />
@@ -85,10 +86,8 @@ function App() {
         {/* Looping through todos for display */}
 
         <ul className="todo-list">
-
           {/* React Map to display the items by using index */}
-          {todos.map((todo, index) => (                 
-
+          {todos.map((todo, index) => (
             <li key={todo.id} className="todo-item-container">
               <div className="todo-item">
                 <input type="checkbox" />
@@ -116,8 +115,8 @@ function App() {
           ))}
         </ul>
 
-<div className="check-all-container">
-<div>
+        <div className="check-all-container">
+          <div>
             <div className="button">Check All</div>
           </div>
           <span>3 items remaining</span>
