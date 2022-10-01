@@ -1,23 +1,16 @@
 {
   "files": {
-    "main.css": "/ReactTableDisplay/static/css/main.5897188c.chunk.css",
-    "main.js": "/ReactTableDisplay/static/js/main.93bab62a.chunk.js",
-    "main.js.map": "/ReactTableDisplay/static/js/main.93bab62a.chunk.js.map",
-    "runtime-main.js": "/ReactTableDisplay/static/js/runtime-main.014522c8.js",
-    "runtime-main.js.map": "/ReactTableDisplay/static/js/runtime-main.014522c8.js.map",
-    "static/js/2.7da34f28.chunk.js": "/ReactTableDisplay/static/js/2.7da34f28.chunk.js",
-    "static/js/2.7da34f28.chunk.js.map": "/ReactTableDisplay/static/js/2.7da34f28.chunk.js.map",
-    "static/js/3.c34c4a62.chunk.js": "/ReactTableDisplay/static/js/3.c34c4a62.chunk.js",
-    "static/js/3.c34c4a62.chunk.js.map": "/ReactTableDisplay/static/js/3.c34c4a62.chunk.js.map",
+    "main.css": "/ReactTableDisplay/static/css/main.9614a41b.css",
+    "main.js": "/ReactTableDisplay/static/js/main.1b1e4d60.js",
+    "static/js/787.e87ecff0.chunk.js": "/ReactTableDisplay/static/js/787.e87ecff0.chunk.js",
+    "static/media/_P.jpg": "/ReactTableDisplay/static/media/2999AC0220334860873_P.dc4efd2531234748be83.jpg",
     "index.html": "/ReactTableDisplay/index.html",
-    "static/css/main.5897188c.chunk.css.map": "/ReactTableDisplay/static/css/main.5897188c.chunk.css.map",
-    "static/js/2.7da34f28.chunk.js.LICENSE.txt": "/ReactTableDisplay/static/js/2.7da34f28.chunk.js.LICENSE.txt",
-    "static/media/2999AC0220334860873_P.dc4efd25.jpg": "/ReactTableDisplay/static/media/2999AC0220334860873_P.dc4efd25.jpg"
+    "main.9614a41b.css.map": "/ReactTableDisplay/static/css/main.9614a41b.css.map",
+    "main.1b1e4d60.js.map": "/ReactTableDisplay/static/js/main.1b1e4d60.js.map",
+    "787.e87ecff0.chunk.js.map": "/ReactTableDisplay/static/js/787.e87ecff0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.014522c8.js",
-    "static/js/2.7da34f28.chunk.js",
-    "static/css/main.5897188c.chunk.css",
-    "static/js/main.93bab62a.chunk.js"
+    "static/css/main.9614a41b.css",
+    "static/js/main.1b1e4d60.js"
   ]
 }
