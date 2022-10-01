@@ -46,11 +46,9 @@ export default function sideBar() {
     </li>
   ));
   return (
-    <div id="sidebar" className="sidebar">
-      <nav className="round">
-        <h3>__Apps & portfolio__</h3>
-        <>{listItems}</>
-      </nav>
-    </div>
+    <nav className="round">
+      <h3>__Apps & portfolio__</h3>
+      <>{listItems}</>
+    </nav>
   );
 }

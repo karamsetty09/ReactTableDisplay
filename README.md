@@ -37,3 +37,7 @@ Command: sudo docker-compose build
 Command: sudo docker-compose up -d
 
 Command: sudo docker-compose down or cntrl + c
+
+## Libraries Used:
+
+React-leaflet: https://react-leaflet.js.org/docs/start-introduction/
