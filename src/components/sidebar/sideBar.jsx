@@ -33,6 +33,7 @@ export default function sideBar() {
       link: "/counterapp",
       logo: <FcClapperboard />,
     },
+    { id: 10, title: "Map", link: "/map", component: <FcSettings /> },
   ];
   const listItems = links.map((link, index) => (
     <li key={index}>

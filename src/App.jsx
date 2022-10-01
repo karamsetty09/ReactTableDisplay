@@ -10,6 +10,7 @@ import MainHeader from "./components/header/mainheader";
 import SideBar from "./components/sidebar/sideBar.jsx";
 import CounterApp from "./components/CounterApp/counter";
 import Footer from "./components/footer/footer";
+import map from "./components/map/map";
 
 import "./App.scss";
 
@@ -28,6 +29,7 @@ export default function App() {
     { id: 7, title: "Learning", path: "/learnings", component: Learning },
     { id: 8, title: "Settings", path: "/settings", component: Settings },
     { id: 9, title: "Counter-App", path: "/counterapp", component: CounterApp },
+    { id: 10, title: "Maps", path: "/map", component: map },
   ];
   function RouteLinks({ item }) {
     return item.id === 1 ? (

@@ -31,9 +31,6 @@ const MainHeader = (props) => {
             <span className="profile-role-tagline">
               Knack of building applications with front and back end
             </span>
-            <br />
-            <h6>Date : {date}</h6>
-            <div className="line-1"></div>
           </div>
         </center>
       </div>
