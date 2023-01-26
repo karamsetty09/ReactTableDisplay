@@ -1,7 +1,8 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useRef, useEffect } from "react";
 import Hr from "./common/hr";
 import { Header } from "./header/header";
 import { compose } from "redux";
+import "./contactMe.scss";
 
 export default function ContactMe() {
   const [isGreen, setIsGreen] = useState(true);
@@ -18,6 +19,53 @@ export default function ContactMe() {
   const center = {
     textAlign: "center",
   };
+
+  // using ref
+  const nameInputRef = useRef<HTMLInputElement>(null);
+
+  // When to use the ref or state
+
+  // for Instant validation & reset the variable -> Use useState()
+  // Never try to reset the current value in react not recommendable.
+  // nameInputRef.current.value = ''; => NOT IDEAL, DON'T Manipulate the dom
+
+  const [enterdName, setEnteredName] = useState("");
+  const [enteredNameIsValid, setEnteredNameIsValid] = useState(false);
+  const [enteredNameTouched, setEnteredNameTouched] = useState(false);
+
+  useEffect(() => {
+    if (enteredNameIsValid) {
+      console.log("Name Input is valid!");
+    }
+  }, [enteredNameIsValid]);
+
+  const nameInputChangeHandler = (event: any) => {
+    setEnteredName(event.target.value);
+  };
+
+  const formSubmissionHandler = (event: any) => {
+    event.preventDefault();
+
+    setEnteredNameTouched(true);
+
+    if (enterdName.trim() === "") {
+      setEnteredNameIsValid(false);
+      return;
+    }
+
+    setEnteredNameIsValid(true);
+
+    console.log(enterdName);
+    const enteredValue = nameInputRef.current?.value;
+    console.log(enteredValue);
+  };
+
+  const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
+
+  const nameInputClasses = nameInputIsInvalid
+    ? "form-control invalid"
+    : "form-control";
+
   return (
     <div>
       <Fragment>
@@ -53,6 +101,23 @@ export default function ContactMe() {
           </h6>
         </details>
       </Fragment>
+      <form onSubmit={formSubmissionHandler}>
+        <div className={nameInputClasses}>
+          <label htmlFor="name">Your Name</label>
+          <input
+            ref={nameInputRef}
+            type="text"
+            id="name"
+            onChange={nameInputChangeHandler}
+          />
+        </div>
+        {nameInputIsInvalid && (
+          <p className="error-text">Name must not be empty.</p>
+        )}
+        <div className="form-actions">
+          <button>Submit</button>
+        </div>
+      </form>
     </div>
   );
 }
