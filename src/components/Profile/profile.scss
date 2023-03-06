@@ -23,3 +23,25 @@
 .h1-color {
   color: #008080;
 }
+
+p {
+  color: grey;
+  text-shadow: 1px 1px 2px pink;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  color: #008080;
+}
+
+table,
+th,
+td {
+  border: 0.1px inset;
+}
+
+table {
+  width: 100%;
+}

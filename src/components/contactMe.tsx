@@ -1,4 +1,4 @@
-import { useState, Fragment, useRef, useEffect } from "react";
+import { useState, Fragment, useEffect } from "react";
 import Hr from "./common/hr";
 import { Header } from "./header/header";
 import { compose } from "redux";
@@ -20,9 +20,6 @@ export default function ContactMe() {
     textAlign: "center",
   };
 
-  // using ref
-  const nameInputRef = useRef<HTMLInputElement>(null);
-
   // When to use the ref or state
 
   // for Instant validation & reset the variable -> Use useState()
@@ -30,12 +27,22 @@ export default function ContactMe() {
   // nameInputRef.current.value = ''; => NOT IDEAL, DON'T Manipulate the dom
 
   const [enterdName, setEnteredName] = useState("");
-  const [enteredNameIsValid, setEnteredNameIsValid] = useState(false);
+  // const [enteredNameIsValid, setEnteredNameIsValid] = useState(false);
   const [enteredNameTouched, setEnteredNameTouched] = useState(false);
+
+  const enteredNameIsValid = enterdName.trim() !== "";
+  const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
+
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
+
+  const [formIsValid, setFormIsValid] = useState(false);
 
   useEffect(() => {
     if (enteredNameIsValid) {
-      console.log("Name Input is valid!");
+      setFormIsValid(true);
+    } else {
+      setFormIsValid(false);
     }
   }, [enteredNameIsValid]);
 
@@ -43,24 +50,23 @@ export default function ContactMe() {
     setEnteredName(event.target.value);
   };
 
+  const nameInputBlurHandler = (event: any) => {
+    setEnteredNameTouched(true);
+  };
+
   const formSubmissionHandler = (event: any) => {
     event.preventDefault();
 
     setEnteredNameTouched(true);
 
-    if (enterdName.trim() === "") {
-      setEnteredNameIsValid(false);
+    if (!enteredNameIsValid) {
       return;
     }
 
-    setEnteredNameIsValid(true);
-
+    setEnteredName("");
+    setEnteredNameTouched(false);
     console.log(enterdName);
-    const enteredValue = nameInputRef.current?.value;
-    console.log(enteredValue);
   };
-
-  const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
 
   const nameInputClasses = nameInputIsInvalid
     ? "form-control invalid"
@@ -68,6 +74,36 @@ export default function ContactMe() {
 
   return (
     <div>
+      <form onSubmit={formSubmissionHandler}>
+        <div className={nameInputClasses}>
+          <label htmlFor="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            onBlur={nameInputBlurHandler}
+            onChange={nameInputChangeHandler}
+          />
+        </div>
+        {nameInputIsInvalid && (
+          <p className="error-text">Name must not be empty.</p>
+        )}
+
+        <div className={nameInputClasses}>
+          <label htmlFor="name">Your Email</label>
+          <input
+            type="text"
+            id="name"
+            onBlur={nameInputBlurHandler}
+            onChange={nameInputChangeHandler}
+          />
+        </div>
+        {nameInputIsInvalid && (
+          <p className="error-text">Name must not be empty.</p>
+        )}
+        <div className="form-actions">
+          <button disabled={!formIsValid}>Submit</button>
+        </div>
+      </form>
       <Fragment>
         <hr />
         <div>
@@ -101,23 +137,6 @@ export default function ContactMe() {
           </h6>
         </details>
       </Fragment>
-      <form onSubmit={formSubmissionHandler}>
-        <div className={nameInputClasses}>
-          <label htmlFor="name">Your Name</label>
-          <input
-            ref={nameInputRef}
-            type="text"
-            id="name"
-            onChange={nameInputChangeHandler}
-          />
-        </div>
-        {nameInputIsInvalid && (
-          <p className="error-text">Name must not be empty.</p>
-        )}
-        <div className="form-actions">
-          <button>Submit</button>
-        </div>
-      </form>
     </div>
   );
 }

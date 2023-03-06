@@ -9,18 +9,52 @@ export default function profile() {
   return (
     <div>
       <hr />
-      <div style={center}>
+      {/* <div style={center}>
         <Header color="white" text="PERSONAL-PROFILE" />
-      </div>
+      </div> */}
       <Hr />
       <p>
-        To excel as a software developer through hard work, perseverance and
-        innovation. To be part of a leading company where I can get
-        opportunities to show my talent and enhance my skills. To meet company
-        goals and objectives with zeal and passion.
+        <i>
+          Experienced full stack web developer working in the SaaS industry with
+          a passion for cracking complicated feature and fixing bugs. Skilled in
+          solving technical problems with a heavy focus on design and
+          implementing visually pleasing UI components. Proven experience in
+          front-end development with Angular and Javascript and backend
+          development with Node. Eager to tackle more complex problems,
+          collaborate with senior developers, and maximise user efficiency by
+          developing quality solutions.
+        </i>
       </p>
       <Hr />
-      <Header style={center} color="white" text="SKILLS" />
+      {/* <Header style={center} color="white" text="SKILLS" /> */}
+      <table>
+        <tr>
+          <Header style={center} color="white" text="SKILLS" />
+        </tr>
+        <tr>
+          <th>Programming Languages</th>
+          <td>
+            <ul>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>SAP ABAP</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Frame Works</th>
+          <td>
+            <ul>
+              <li>Laravel</li>
+              <li>Nodejs</li>
+              <li>Reactjs</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
       <section className="wrapper">
         <section className="a">
           <p>
@@ -49,7 +83,7 @@ export default function profile() {
           <br />
         </section>
         <section className="b">
-          <p>PHP, JavaScript, C#, Python, Java, SAP ABAP, c++</p>
+          <p>JavaScript, PHP, Python, Java, SAP ABAP</p>
           <br />
           <p>Laravel, Nodejs, Reactjs</p>
           <br />
