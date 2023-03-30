@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ReactTableDisplay/static/css/main.84385ca9.css",
-    "main.js": "/ReactTableDisplay/static/js/main.bc284096.js",
+    "main.css": "/ReactTableDisplay/static/css/main.3f71431c.css",
+    "main.js": "/ReactTableDisplay/static/js/main.a55ad26b.js",
     "static/js/787.e87ecff0.chunk.js": "/ReactTableDisplay/static/js/787.e87ecff0.chunk.js",
     "static/media/_P.jpg": "/ReactTableDisplay/static/media/2999AC0220334860873_P.dc4efd2531234748be83.jpg",
     "index.html": "/ReactTableDisplay/index.html",
-    "main.84385ca9.css.map": "/ReactTableDisplay/static/css/main.84385ca9.css.map",
-    "main.bc284096.js.map": "/ReactTableDisplay/static/js/main.bc284096.js.map",
+    "main.3f71431c.css.map": "/ReactTableDisplay/static/css/main.3f71431c.css.map",
+    "main.a55ad26b.js.map": "/ReactTableDisplay/static/js/main.a55ad26b.js.map",
     "787.e87ecff0.chunk.js.map": "/ReactTableDisplay/static/js/787.e87ecff0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84385ca9.css",
-    "static/js/main.bc284096.js"
+    "static/css/main.3f71431c.css",
+    "static/js/main.a55ad26b.js"
   ]
 }
