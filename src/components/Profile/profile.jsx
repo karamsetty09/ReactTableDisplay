@@ -53,50 +53,45 @@ export default function profile() {
             </ul>
           </td>
         </tr>
+        <tr>
+          <th>Database:</th>
+          <td>
+            <ul>
+              <li>Mongodb</li>
+              <li>Sql</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Development Environments:</th>
+          <td>
+            <ul>
+              <li>Visual Studio</li>
+              <li>php Storm</li>
+              <li>Docker</li>
+              <li>SAP</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Web Technologies</th>
+          <td>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Version Control</th>
+          <td>
+            <ul>
+              <li>git, bitbucket</li>
+            </ul>
+          </td>
+        </tr>
       </table>
-
-      <section className="wrapper">
-        <section className="a">
-          <p>
-            <strong>Programming Languages:</strong>{" "}
-          </p>
-          <br />
-          <p>
-            <strong>Frame Works:</strong>{" "}
-          </p>
-          <br />
-          <p>
-            <strong>Database:</strong>{" "}
-          </p>
-          <br />
-          <p>
-            <strong>Development Environments:</strong>{" "}
-          </p>
-          <br />
-          <p>
-            <strong>Web Technologies:</strong>{" "}
-          </p>
-          <br />
-          <p>
-            <strong>Version Control:</strong>{" "}
-          </p>
-          <br />
-        </section>
-        <section className="b">
-          <p>JavaScript, PHP, Python, Java, SAP ABAP</p>
-          <br />
-          <p>Laravel, Nodejs, Reactjs</p>
-          <br />
-          <p>Mongodb, Sql</p>
-          <br />
-          <p>Visual Studio, php Storm, Docker, SAP</p>
-          <br />
-          <br />
-          <p>HTML/CSS, JavaScript</p>
-          <br />
-          <p>git</p>
-        </section>
-      </section>
     </div>
   );
 }
