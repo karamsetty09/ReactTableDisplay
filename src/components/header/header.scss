@@ -1,6 +1,6 @@
 /*Header coloring and flex to display contents of div. */
 .header {
-  background-color: #c7ea46;
+  background-color: black;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -28,14 +28,14 @@ header.round {
 }
 
 .name {
-  color: #046b65;
+  color: red;
 }
 span {
-  color: #008080;
+  color: red;
 }
 
 .button {
-  background-color: #046b65;
+  background-color: red;
   border: none;
   color: white;
   padding: 12px 24px;
