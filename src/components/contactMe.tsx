@@ -1,7 +1,8 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import Hr from "./common/hr";
 import { Header } from "./header/header";
 import { compose } from "redux";
+import "./contactMe.scss";
 
 export default function ContactMe() {
   const [isGreen, setIsGreen] = useState(true);
@@ -18,8 +19,91 @@ export default function ContactMe() {
   const center = {
     textAlign: "center",
   };
+
+  // When to use the ref or state
+
+  // for Instant validation & reset the variable -> Use useState()
+  // Never try to reset the current value in react not recommendable.
+  // nameInputRef.current.value = ''; => NOT IDEAL, DON'T Manipulate the dom
+
+  const [enterdName, setEnteredName] = useState("");
+  // const [enteredNameIsValid, setEnteredNameIsValid] = useState(false);
+  const [enteredNameTouched, setEnteredNameTouched] = useState(false);
+
+  const enteredNameIsValid = enterdName.trim() !== "";
+  const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
+
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
+
+  const [formIsValid, setFormIsValid] = useState(false);
+
+  useEffect(() => {
+    if (enteredNameIsValid) {
+      setFormIsValid(true);
+    } else {
+      setFormIsValid(false);
+    }
+  }, [enteredNameIsValid]);
+
+  const nameInputChangeHandler = (event: any) => {
+    setEnteredName(event.target.value);
+  };
+
+  const nameInputBlurHandler = (event: any) => {
+    setEnteredNameTouched(true);
+  };
+
+  const formSubmissionHandler = (event: any) => {
+    event.preventDefault();
+
+    setEnteredNameTouched(true);
+
+    if (!enteredNameIsValid) {
+      return;
+    }
+
+    setEnteredName("");
+    setEnteredNameTouched(false);
+    console.log(enterdName);
+  };
+
+  const nameInputClasses = nameInputIsInvalid
+    ? "form-control invalid"
+    : "form-control";
+
   return (
     <div>
+      <form onSubmit={formSubmissionHandler}>
+        <div className={nameInputClasses}>
+          <label htmlFor="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            onBlur={nameInputBlurHandler}
+            onChange={nameInputChangeHandler}
+          />
+        </div>
+        {nameInputIsInvalid && (
+          <p className="error-text">Name must not be empty.</p>
+        )}
+
+        <div className={nameInputClasses}>
+          <label htmlFor="name">Your Email</label>
+          <input
+            type="text"
+            id="name"
+            onBlur={nameInputBlurHandler}
+            onChange={nameInputChangeHandler}
+          />
+        </div>
+        {nameInputIsInvalid && (
+          <p className="error-text">Name must not be empty.</p>
+        )}
+        <div className="form-actions">
+          <button disabled={!formIsValid}>Submit</button>
+        </div>
+      </form>
       <Fragment>
         <hr />
         <div>
